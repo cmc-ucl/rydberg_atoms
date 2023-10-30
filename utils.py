@@ -104,6 +104,9 @@ def get_partition_function(energy, multiplicity, T=298.15, return_pi=True, N_N=0
         return pf
 
 
+
+######## Mao's change
+
 import functools as ft
 import numpy as np
 
@@ -127,6 +130,8 @@ from braket.analog_hamiltonian_simulator.rydberg.rydberg_simulator_helpers impor
 from braket.analog_hamiltonian_simulator.rydberg.rydberg_simulator_unit_converter import (
     convert_unit,
 )
+
+import matplotlib.pyplot as plt
 
 
 def tensor(N, indices):
@@ -330,3 +335,23 @@ def get_final_ryd_Hamiltonian(
     
     
     return diagH, min_val, min_val_indices, configs, R
+
+
+def show_coords(coords, radius=1.0, show_atom_index=True):
+    """
+    Plot the given coordinates for the atoms
+    """
+    fig = plt.figure(figsize=(7, 7))
+    plt.plot(np.array(coords)[:, 0], np.array(coords)[:, 1], 'r.', ms=15)
+
+    if show_atom_index:
+        for idx, coord in enumerate(coords):
+            plt.text(coord[0], coord[1], f"  {idx}", fontsize=12)
+    
+    if radius > 0:
+        for site in coords:
+            plt.gca().add_patch( plt.Circle((site[0],site[1]), radius/2, color="b", alpha=0.3) )
+        plt.gca().set_aspect(1)
+    plt.show()
+
+
