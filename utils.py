@@ -1,5 +1,5 @@
 import numpy as np
-
+from joblib import Parallel, delayed
 
 def build_symmetry_equivalent_configurations(atom_indices,N_index):
     
@@ -56,19 +56,39 @@ def find_sic(configurations,energies,atom_indices):
     config_unique = []
     multiplicity = []
     keep_energy = [] 
-    for i,config in enumerate(configurations):
+#     for i,config in enumerate(configurations):
         
+#         sites = np.where(config == 1)[0] 
+#         sec = build_symmetry_equivalent_configurations(atom_indices,sites)
+#         sic = sec[0]
+#         is_in_config_unique = any(np.array_equal(sic, existing_sic) for existing_sic in config_unique)
+        
+#         if not is_in_config_unique:  
+
+#             config_unique.append(sic)
+
+#             multiplicity.append(len(sec))
+#             keep_energy.append(i)
+
+    def get_config_multiplicity(input_data):
+        i, config = input_data[0], input_data[1]
         sites = np.where(config == 1)[0] 
         sec = build_symmetry_equivalent_configurations(atom_indices,sites)
         sic = sec[0]
         is_in_config_unique = any(np.array_equal(sic, existing_sic) for existing_sic in config_unique)
         
+        return (is_in_config_unique, sic, len(sec), i)
+    
+    results = Parallel(n_jobs=-1, backend="loky")(map(delayed(get_config_multiplicity), enumerate(configurations)))
+    
+    for (is_in_config_unique, sic, len_sec, i) in results:
         if not is_in_config_unique:  
 
             config_unique.append(sic)
 
-            multiplicity.append(len(sec))
-            keep_energy.append(i)
+            multiplicity.append(len_sec)
+            keep_energy.append(i)        
+
     unique_energies = np.array(energies)[keep_energy]
     
     return config_unique, unique_energies, multiplicity
