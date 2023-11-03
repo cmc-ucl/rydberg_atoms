@@ -56,38 +56,38 @@ def find_sic(configurations,energies,atom_indices):
     config_unique = []
     multiplicity = []
     keep_energy = [] 
-#     for i,config in enumerate(configurations):
+    for i,config in enumerate(configurations):
         
-#         sites = np.where(config == 1)[0] 
-#         sec = build_symmetry_equivalent_configurations(atom_indices,sites)
-#         sic = sec[0]
-#         is_in_config_unique = any(np.array_equal(sic, existing_sic) for existing_sic in config_unique)
-        
-#         if not is_in_config_unique:  
-
-#             config_unique.append(sic)
-
-#             multiplicity.append(len(sec))
-#             keep_energy.append(i)
-
-    def get_config_multiplicity(input_data):
-        i, config = input_data[0], input_data[1]
         sites = np.where(config == 1)[0] 
         sec = build_symmetry_equivalent_configurations(atom_indices,sites)
         sic = sec[0]
         is_in_config_unique = any(np.array_equal(sic, existing_sic) for existing_sic in config_unique)
         
-        return (is_in_config_unique, sic, len(sec), i)
-    
-    results = Parallel(n_jobs=-1, backend="loky")(map(delayed(get_config_multiplicity), enumerate(configurations)))
-    
-    for (is_in_config_unique, sic, len_sec, i) in results:
         if not is_in_config_unique:  
 
             config_unique.append(sic)
 
-            multiplicity.append(len_sec)
-            keep_energy.append(i)        
+            multiplicity.append(len(sec))
+            keep_energy.append(i)
+
+#     def get_config_multiplicity(input_data):
+#         i, config = input_data[0], input_data[1]
+#         sites = np.where(config == 1)[0] 
+#         sec = build_symmetry_equivalent_configurations(atom_indices,sites)
+#         sic = sec[0]
+#         is_in_config_unique = any(np.array_equal(sic, existing_sic) for existing_sic in config_unique)
+        
+#         return (is_in_config_unique, sic, len(sec), i)
+    
+#     results = Parallel(n_jobs=-1, backend="loky")(map(delayed(get_config_multiplicity), enumerate(configurations)))
+    
+#     for (is_in_config_unique, sic, len_sec, i) in results:
+#         if not is_in_config_unique:  
+
+#             config_unique.append(sic)
+
+#             multiplicity.append(len_sec)
+#             keep_energy.append(i)        
 
     unique_energies = np.array(energies)[keep_energy]
     
@@ -375,3 +375,101 @@ def show_coords(coords, radius=1.0, show_atom_index=True):
     plt.show()
 
 
+def get_final_ryd_Hamiltonian_v2(
+    coords, 
+    detuning = 125000000.0,
+    J1=0.080403, 
+    J2=0.019894,
+    C6 = 5.42e-24
+):
+    """
+        Return the Rydberg Hamiltonian for a given atom arrangement and a QUBO model, version 2
+        
+        
+        Args:
+            coords: The coordinates of atoms and we assume that the nearest neighbor distance is 1. 
+            detuning: The detuning in the Rydberg Hamiltonian
+            J1: The linear term in the QUBO
+            J2: The nearest neighbor interaction in the QUBO
+            C6: The Rydberg interaction constant
+            
+        Notes:
+            In this version, we have only one formula for R, namely (C6/detuning * -J1/J2)**(1/6).
+            We return ratio = abs(detuning / J1) to map the spectrums
+            
+    """
+    
+    num_atoms = len(coords)
+    
+    if J1 == 0:
+        detuning = 0
+#         R = 8e-6
+    elif J1 < 0:
+        detuning = abs(detuning)
+    else:
+        detuning = -abs(detuning)
+    
+    
+    
+    R = (C6/detuning * -J1/J2)**(1/6)
+    ratio = abs(detuning/1e6 / J1)
+    
+    
+    # We will define the Hamiltonian via a ficticious AHS program
+    
+    # Define the register 
+    register = AtomArrangement()
+
+    for coord in coords:
+        register.add(np.array(coord) * R)
+        
+    # Define a const driving field with zero Rabi frequency, and 
+    # max allowed detuning
+    t_max = 4e-6
+    Omega = TimeSeries().put(0.0, 0.0).put(t_max, 0.0)
+    Delta = TimeSeries().put(0.0, detuning).put(t_max, detuning)
+    phi = TimeSeries().put(0.0, 0.0).put(t_max, 0.0)
+    
+    drive = DrivingField(
+        amplitude=Omega,
+        phase=phi,
+        detuning=Delta
+    )
+    
+    program = AnalogHamiltonianSimulation(
+        hamiltonian=drive,
+        register=register
+    )
+    
+    
+    # Now extract the Hamiltonian as a matrix from the program
+    
+    program = convert_unit(program.to_ir())
+        
+    configurations = get_blockade_configurations(program.setup.ahs_register, 0.0)
+
+    
+    rydberg_interaction_coef = RYDBERG_INTERACTION_COEF / ((SPACE_UNIT**6) / TIME_UNIT)
+        
+    rabi_ops, detuning_ops, interaction_op, local_detuning_ops = _get_sparse_ops(
+        program, configurations, rydberg_interaction_coef
+    )
+        
+    t_max_converted = program.hamiltonian.drivingFields[0].amplitude.time_series.times[-1]
+    rabi_coefs, detuning_coefs, local_detuing_coefs = _get_coefs(program, [0, t_max_converted])
+    
+#     print(f"interaction_op={interaction_op}")
+#     print(f"detuning_ops[0]={detuning_ops[0]}")
+#     print(f"detuning_coefs[0][-1]={detuning_coefs[0][-1]}")
+    
+    H = interaction_op - detuning_ops[0] * detuning_coefs[0][-1]
+    
+    # H is diagonal
+    diagH = np.real(H.diagonal())
+    
+    min_val = min(diagH)
+    min_val_indices = [i for i in range(len(diagH)) if diagH[i]==min_val]
+    configs = [f'{index:0{num_atoms}b}' for index in min_val_indices]
+    
+    
+    return diagH, min_val, min_val_indices, configs, R, ratio
