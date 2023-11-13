@@ -33,7 +33,7 @@ def build_symmetry_equivalent_configurations(atom_indices,N_index):
     return unique_configurations
 
 
-def find_sic(configurations,energies,atom_indices):
+def find_sic(configurations,atom_indices, energies=None, sort=True):
     
     """
     Find symmetry-inequivalent configurations (SIC) and return their corresponding unique energies.
@@ -68,12 +68,29 @@ def find_sic(configurations,energies,atom_indices):
             config_unique.append(sic)
 
             multiplicity.append(len(sec))
-            keep_energy.append(i)
-    unique_energies = np.array(energies)[keep_energy]
+            if energies is not None:
+                keep_energy.append(i)
+    if sort == True:
+        n_ones = np.sum(config_unique,axis=1)
+        config_unique = (np.array(config_unique)[np.argsort(n_ones)]).tolist()
+        
     
-    return config_unique, unique_energies, multiplicity
+        if energies is not None:
+            unique_energies = np.array(energies)[keep_energy]
+            unique_energies = (unique_energies[np.argsort(n_ones)]).tolist()
+        
+            return config_unique, unique_energies, multiplicity
+        else:
+            return config_unique, multiplicity
+    else:
+        if energies is not None:
+            return config_unique, unique_energies, multiplicity
+        else:
+            return config_unique, multiplicity
+
 
 def get_partition_function(energy, multiplicity, T=298.15, return_pi=True, N_N=0, N_potential=0.):
+
     """
     Calculate the partition function and probabilities for different energy levels.
     
@@ -102,3 +119,27 @@ def get_partition_function(energy, multiplicity, T=298.15, return_pi=True, N_N=0
         return pf, p_i
     else:
         return pf
+  
+    
+def build_adjacency_matrix(structure, max_neigh = 1, diagonal_terms = False, triu = False):
+    # structure = pymatgen Structure object
+    
+    num_sites = structure.num_sites
+    distance_matrix_pbc = np.round(structure.distance_matrix,5)
+
+    distance_matrix = np.zeros((num_sites,num_sites),float)
+    
+    shells = np.unique(distance_matrix_pbc[0])
+    
+    for i,s in enumerate(shells[0:max_neigh+1]):
+        row_index = np.where(distance_matrix_pbc == s)[0]
+        col_index = np.where(distance_matrix_pbc == s)[1]
+        distance_matrix[row_index,col_index] = i
+    
+    if triu == True:
+        distance_matrix = np.triu(distance_matrix,0)
+    
+    if diagonal_terms == True:
+        np.fill_diagonal(distance_matrix,[1]*num_sites)
+    
+    return distance_matrix
