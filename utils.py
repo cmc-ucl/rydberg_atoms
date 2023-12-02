@@ -1,4 +1,5 @@
 import numpy as np
+import scipy
 from joblib import Parallel, delayed
 
 def build_symmetry_equivalent_configurations(atom_indices,N_index):
@@ -201,7 +202,10 @@ from braket.analog_hamiltonian_simulator.rydberg.constants import (
 from braket.analog_hamiltonian_simulator.rydberg.rydberg_simulator_helpers import (
     get_blockade_configurations,
     _get_sparse_ops,
-    _get_coefs
+    _get_coefs,
+    _get_rabi_dict,
+    _get_detuning_dict,
+    _get_sparse_from_dict
 )
 
 from braket.analog_hamiltonian_simulator.rydberg.rydberg_simulator_unit_converter import (
@@ -437,7 +441,9 @@ def get_final_ryd_Hamiltonian_v2(
     detuning = 125000000.0,
     J1=0.080403, 
     J2=0.019894,
-    C6 = 5.42e-24
+    C6 = 5.42e-24,
+    file_to_existing_interaction_op: str = None,
+    filename_to_save_interaction_op: str = None
 ):
     """
         Return the Rydberg Hamiltonian for a given atom arrangement and a QUBO model, version 2
@@ -508,9 +514,38 @@ def get_final_ryd_Hamiltonian_v2(
     
     rydberg_interaction_coef = RYDBERG_INTERACTION_COEF / ((SPACE_UNIT**6) / TIME_UNIT)
         
-    rabi_ops, detuning_ops, interaction_op, local_detuning_ops = _get_sparse_ops(
-        program, configurations, rydberg_interaction_coef
-    )
+    if file_to_existing_interaction_op is None:
+        rabi_ops, detuning_ops, interaction_op, local_detuning_ops = _get_sparse_ops(
+            program, configurations, rydberg_interaction_coef
+        )
+        if filename_to_save_interaction_op is not None:
+            scipy.sparse.save_npz(filename_to_save_interaction_op, interaction_op)
+    else:
+        targets = np.arange(np.count_nonzero(program.setup.ahs_register.filling))
+        rabi_dict = _get_rabi_dict(targets, configurations)
+        detuning_dict = _get_detuning_dict(targets, configurations)
+
+        # Driving field is an array of operators, which has only one element for now
+        rabi_ops = [_get_sparse_from_dict(rabi_dict, len(configurations))]
+        detuning_ops = [_get_sparse_from_dict(detuning_dict, len(configurations))]
+        
+        # Get the shifting fields as sparse matrices.
+        # Shifting field is an array of operators, which has only one element for now
+        local_detuning_ops = []
+        for shifting_field in program.hamiltonian.shiftingFields:
+            temp = 0
+            for site in range(len(shifting_field.magnitude.pattern)):
+                strength = shifting_field.magnitude.pattern[site]
+                opt = _get_sparse_from_dict(
+                    _get_detuning_dict((site,), configurations), len(configurations)
+                )
+                temp += float(strength) * scipy.sparse.csr_matrix(opt, dtype=float)
+
+            local_detuning_ops.append(temp)
+            
+        ## Load the existing interaction_op
+        interaction_op = scipy.sparse.load_npz(file_to_existing_interaction_op)
+        
         
     t_max_converted = program.hamiltonian.drivingFields[0].amplitude.time_series.times[-1]
     rabi_coefs, detuning_coefs, local_detuing_coefs = _get_coefs(program, [0, t_max_converted])
