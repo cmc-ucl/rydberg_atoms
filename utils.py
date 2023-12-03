@@ -34,7 +34,13 @@ def build_symmetry_equivalent_configurations(atom_indices,N_index):
     return unique_configurations
 
 
-def find_sic(configurations,atom_indices, energies=None, sort=True):
+def find_sic(
+    configurations=None, 
+    atom_indices=None, 
+    energies=None, 
+    sort=True,
+    sic_file_name = None
+):
     
     """
     Find symmetry-inequivalent configurations (SIC) and return their corresponding unique energies.
@@ -54,23 +60,31 @@ def find_sic(configurations,atom_indices, energies=None, sort=True):
     - multiplicity (List[int]): A list of multiplicity values for each unique configuration.
     """
     
-    config_unique = []
-    multiplicity = []
-    keep_energy = [] 
-    for i,config in enumerate(configurations):
-        
-        sites = np.where(config == 1)[0] 
-        sec = build_symmetry_equivalent_configurations(atom_indices,sites)
-        sic = sec[0]
-        is_in_config_unique = any(np.array_equal(sic, existing_sic) for existing_sic in config_unique)
-        
-        if not is_in_config_unique:  
+    if sic_file_name is None:
+        config_unique = []
+        multiplicity = []
+        keep_energy = [] 
+        for i,config in enumerate(configurations):
 
-            config_unique.append(sic)
+            sites = np.where(config == 1)[0] 
+            sec = build_symmetry_equivalent_configurations(atom_indices,sites)
+            sic = sec[0]
+            is_in_config_unique = any(np.array_equal(sic, existing_sic) for existing_sic in config_unique)
 
-            multiplicity.append(len(sec))
-            if energies is not None:
-                keep_energy.append(i)
+            if not is_in_config_unique:  
+
+                config_unique.append(sic)
+
+                multiplicity.append(len(sec))
+                if energies is not None:
+                    keep_energy.append(i)
+    else:
+        sic = np.load(sic_file_name, allow_pickle=True)
+        config_unique = sic["config_unique"]
+        multiplicity = sic["multiplicity"]
+        keep_energy = sic["keep_energy"]
+        
+        
     if sort == True:
         n_ones = np.sum(config_unique,axis=1)
         config_unique = (np.array(config_unique)[np.argsort(n_ones)]).tolist()
@@ -89,6 +103,60 @@ def find_sic(configurations,atom_indices, energies=None, sort=True):
         else:
             return config_unique, multiplicity
 
+# def find_sic(configurations,atom_indices, energies=None, sort=True):
+    
+#     """
+#     Find symmetry-inequivalent configurations (SIC) and return their corresponding unique energies.
+
+#     This function takes a list of binary configurations and their associated energies,
+#     as well as atom indices, and returns the unique SIC, unique energies, and the multiplicity
+#     of each unique configuration.
+
+#     Parameters:
+#     - configurations (numpy array 2D): A list of binary configurations.
+#     - energies (numpy array 1D): A list of energies (one per configuration).
+#     - atom_indices (numpy array 1D): Atom indices returned by get_all_configurations_no_pbc or get_all_configurations_pbc.
+
+#     Returns:
+#     - config_unique (List[List[int]]): A list of unique symmetry-inequivalent configurations.
+#     - unique_energies (List[float]): A list of unique energies corresponding to config_unique.
+#     - multiplicity (List[int]): A list of multiplicity values for each unique configuration.
+#     """
+    
+#     config_unique = []
+#     multiplicity = []
+#     keep_energy = [] 
+#     for i,config in enumerate(configurations):
+        
+#         sites = np.where(config == 1)[0] 
+#         sec = build_symmetry_equivalent_configurations(atom_indices,sites)
+#         sic = sec[0]
+#         is_in_config_unique = any(np.array_equal(sic, existing_sic) for existing_sic in config_unique)
+        
+#         if not is_in_config_unique:  
+
+#             config_unique.append(sic)
+
+#             multiplicity.append(len(sec))
+#             if energies is not None:
+#                 keep_energy.append(i)
+#     if sort == True:
+#         n_ones = np.sum(config_unique,axis=1)
+#         config_unique = (np.array(config_unique)[np.argsort(n_ones)]).tolist()
+        
+    
+#         if energies is not None:
+#             unique_energies = np.array(energies)[keep_energy]
+#             unique_energies = (unique_energies[np.argsort(n_ones)]).tolist()
+        
+#             return config_unique, unique_energies, multiplicity
+#         else:
+#             return config_unique, multiplicity
+#     else:
+#         if energies is not None:
+#             return config_unique, unique_energies, multiplicity
+#         else:
+#             return config_unique, multiplicity
         
 
 # def find_sic(configurations,energies,atom_indices):
