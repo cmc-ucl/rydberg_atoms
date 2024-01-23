@@ -6,7 +6,7 @@ These two folders have similar structures. In the "graphene_54_1.01_R_plots" fol
 
 2. "atom_coordinates.csv" and "atom_coordinates.png": the atom coordinates
 
-3. "mps_samples.csv" and "mps_samples.png": the 1000 sampled results at the end of the evolution 
+3. "mps_samples.csv" and "mps_samples.png": the 1000 sampled results at the end of the evolution (Boltzmann distribution)
 
 4. "most_likely_configs.png": The first two lowest lying states
 
