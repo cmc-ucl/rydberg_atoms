@@ -8,8 +8,10 @@ sys.stdout = log_file
 import json
 from pyscf import gto, dft
 from pyscf.geomopt.geometric_solver import optimize
+import time
 #
-#
+
+print(time.time())
 
 structure_n = 186
 
@@ -128,7 +130,7 @@ species = ['C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C',
            'H', 'H', 'H', 'H', 'H', 'H', 'H', 'H', 'H', 'H', 'H', 'H', 
            'H', 'H', 'H', 'H', 'H', 'H']
 
-    
+N_N = len(N_index)
 
 for index in N_index:
     species[index] = 'N'
@@ -137,6 +139,7 @@ for index in N_index:
 mol = gto.Mole()
 mol.atom = [[str(species[i]), coord] for i, coord in enumerate(coords)]
 mol.basis = 'ccpvtz'
+mol.spin = N_N%2
 mol.build()
 
 # Perform DFT calculation
@@ -147,6 +150,7 @@ mol_eq = optimize(mf,maxsteps=200)
 
 mf_eq = dft.RKS(mol_eq)
 mf_eq.xc = 'pbe0'
+mf_eq.spin = N_N%2
 energy = mf_eq.kernel()
 
 
@@ -177,6 +181,9 @@ with open('graphene_mol_r_6_6_h_{}.xyz'.format(structure_n), 'w') as f:
         symbol = gto.mole._symbol(atom_charges[i])
         x, y, z = atom_coords[i]
         f.write(f"{symbol} {x:.6f} {y:.6f} {z:.6f}\n")
+ 
+
+print(time.time())
 
 ###### capture the output ##########
 sys.stdout = old_stdout
