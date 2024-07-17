@@ -7,75 +7,45 @@ print(sys.argv[0])
 
 
 # Determine the files need to be run on each instance
-if region == "us-east-1":
-    folder = "test_set"
-    start_ind = 242
-    num_per_instance = 2
-elif region == "us-east-2":
-    folder = "test_set"
-    start_ind = 236
-    num_per_instance = 2
-elif region == "us-west-1":
-    folder = "test_set"
-    start_ind = 230
-    num_per_instance = 2
-elif region == "us-west-2":
-    folder = "test_set"
-    start_ind = 224
-    num_per_instance = 2
-elif region == "ap-south-1":
-    folder = "test_set"
-    start_ind = 218
-    num_per_instance = 2
-elif region == "ca-central-1":
-    folder = "test_set"
-    start_ind = 212
-    num_per_instance = 2
-elif region == "eu-north-1":
-    folder = "test_set"
-    start_ind = 206
-    num_per_instance = 2
-elif region == "eu-west-2":
-    folder = "test_set"
-    start_ind = 200
-    num_per_instance = 2
-elif region == "ap-northeast-3":
-    folder = "test_set"
-    start_ind = 194
-    num_per_instance = 2
-elif region == "ap-northeast-2":
-    folder = "test_set"
-    start_ind = 188
-    num_per_instance = 2
-elif region == "ap-northeast-1":
-    folder = "test_set"
-    start_ind = 182
-    num_per_instance = 2
-elif region == "ap-southeast-2":
-    folder = "test_set"
-    start_ind = 176
-    num_per_instance = 2
-elif region == "ap-southeast-1":
-    folder = "test_set"
-    start_ind = 170
-    num_per_instance = 2
+folder = "test_set"
+num_per_instance = 2
 
+if region == "us-east-1":
+    start_ind = 242
+elif region == "us-east-2":
+    # start_ind = 236
+    start_ind = 140
+elif region == "us-west-1":
+    start_ind = 230
+elif region == "us-west-2":
+    # start_ind = 224
+    start_ind = 134
+elif region == "ap-south-1":
+    start_ind = 218
+elif region == "ca-central-1":
+    start_ind = 212
+elif region == "eu-north-1":
+    start_ind = 206
+elif region == "eu-west-2":
+    start_ind = 200
+elif region == "ap-northeast-3":
+    start_ind = 194
+elif region == "ap-northeast-2":
+    start_ind = 188
+elif region == "ap-northeast-1":
+    start_ind = 182
+elif region == "ap-southeast-2":
+    start_ind = 176
+elif region == "ap-southeast-1":
+    start_ind = 170
 elif region == "eu-central-1":
-    folder = "test_set"
     start_ind = 164
-    num_per_instance = 2
 elif region == "eu-west-1":
-    folder = "test_set"
     start_ind = 158
-    num_per_instance = 2
 elif region == "eu-west-3":
-    folder = "test_set"
     start_ind = 152
-    num_per_instance = 2
 elif region == "sa-east-1":
-    folder = "test_set"
     start_ind = 146
-    num_per_instance = 2
 
 
 # Get the instances in that region
