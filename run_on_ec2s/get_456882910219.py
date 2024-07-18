@@ -1,5 +1,5 @@
 import os
-os.environ['AWS_PROFILE'] = 'maolinml'
+os.environ['AWS_PROFILE'] = 'maolinml2'
 
 
 regions = [
@@ -44,28 +44,7 @@ for region in regions:
         public_ips.append(public_ip)
         ids.append(instance.id)
 
-
-    if region == "us-east-1":
-        public_ips = public_ips[1:]
-        ids = ids[1:]
-    elif region == "us-east-2":
-        public_ips = public_ips[:-1]
-        ids = ids[:-1]
-
-
-    if region == "us-east-1":
-        key_file = "../../../../Braket/keys/graphene.pem"
-    elif region == "us-east-2":
-        region2 = region.replace("-", "_")
-        key_file = f"../../../../Braket/keys/graphene_{region2}.pem"
-    elif region == "us-west-1":
-        key_file = "../../../../Braket/keys/docker-west-1.pem"
-    elif region == "us-west-2":
-        key_file = "../../../../Braket/keys/trydocker.pem"
-    elif region == "sa-east-1":
-        key_file = f"../../../../Braket/keys/graphene-{region}.pem"    
-    else:
-        key_file = f"../../../../Braket/keys/graphene_{region}.pem"    
+    key_file = f"../../../../Braket/keys/maolinml2/{region}.pem"
 
     # Note the ec2_addresses are different from those in the run file
     if region == "us-east-1":
@@ -90,15 +69,15 @@ for region in regions:
         status = command['Status']
         print(instance_id, status)
 
-        if status == "Success":
-            # print(ec2_address)
-            command = [
-                "scp", 
-                "-i", 
-                key_file,
-                f"{ec2_address}/home/ec2-user/graphene_*",
-                "."
-            ]
-            subprocess.run(command)
+        # if status == "Success":
+        #     # print(ec2_address)
+        #     command = [
+        #         "scp", 
+        #         "-i", 
+        #         key_file,
+        #         f"{ec2_address}/home/ec2-user/graphene_*",
+        #         "."
+        #     ]
+        #     subprocess.run(command)
 
     print()

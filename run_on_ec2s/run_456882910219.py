@@ -1,5 +1,6 @@
 import os
-os.environ['AWS_PROFILE'] = 'maolinml'
+os.environ['AWS_PROFILE'] = 'maolinml2'
+
 
 import sys
 import boto3
@@ -14,42 +15,41 @@ folder = "test_set"
 num_per_instance = 2
 
 if region == "us-east-1":
-    # start_ind = 242
-    start_ind = 128
+    start_ind = 122
 elif region == "us-east-2":
-    # start_ind = 236
-    start_ind = 140
+    start_ind = 116
 elif region == "us-west-1":
-    start_ind = 230
+    start_ind = 110
 elif region == "us-west-2":
-    # start_ind = 224
-    start_ind = 134
+    start_ind = 104
 elif region == "ap-south-1":
-    start_ind = 218
+    start_ind = 98
 elif region == "ca-central-1":
-    start_ind = 212
+    # start_ind = 92 # Skip this one because 94 has been run
+    start_ind = 86
 elif region == "eu-north-1":
-    start_ind = 206
+    start_ind = 80
 elif region == "eu-west-2":
-    start_ind = 200
+    start_ind = 74
 elif region == "ap-northeast-3":
-    start_ind = 194
+    start_ind = 68
 elif region == "ap-northeast-2":
-    start_ind = 188
+    start_ind = 62
 elif region == "ap-northeast-1":
-    start_ind = 182
+    start_ind = 56
 elif region == "ap-southeast-2":
-    start_ind = 176
+    start_ind = 50
 elif region == "ap-southeast-1":
-    start_ind = 170
+    # start_ind = 44 # Skip this one because 47 48 has been run
+    start_ind = 38
 elif region == "eu-central-1":
-    start_ind = 164
+    start_ind = 32
 elif region == "eu-west-1":
-    start_ind = 158
+    start_ind = 26
 elif region == "eu-west-3":
-    start_ind = 152
+    start_ind = 20
 elif region == "sa-east-1":
-    start_ind = 146
+    start_ind = 14
 
 
 # Get the instances in that region
@@ -73,14 +73,6 @@ for instance in instances:
     public_ips.append(public_ip)
     ids.append(instance.id)
 
-
-if region == "us-east-1":
-    public_ips = public_ips[1:]
-    ids = ids[1:]
-elif region == "us-east-2":
-    public_ips = public_ips[:-1]
-    ids = ids[:-1]
-
 print(public_ips)
 print(ids)
 if region == "us-east-1":
@@ -88,28 +80,10 @@ if region == "us-east-1":
 else:
     ec2_addresses = [f"ec2-user@ec2-{public_ip}.{region}.compute.amazonaws.com:./" for public_ip in public_ips]
 
-# elif region == "us-east-2":
-#     ec2_addresses = [f"ec2-user@ec2-{public_ip}.us-east-2.compute.amazonaws.com:./" for public_ip in public_ips]
-# elif region == "us-west-1":
-#     ec2_addresses = [f"ec2-user@ec2-{public_ip}.us-west-1.compute.amazonaws.com:./" for public_ip in public_ips]
-
 
 # Upload the files to the instances
 import subprocess
-if region == "us-east-1":
-    key_file = "../../../../Braket/keys/graphene.pem"
-elif region == "us-east-2":
-    region2 = region.replace("-", "_")
-    key_file = f"../../../../Braket/keys/graphene_{region2}.pem"
-elif region == "us-west-1":
-    key_file = "../../../../Braket/keys/docker-west-1.pem"
-elif region == "us-west-2":
-    key_file = "../../../../Braket/keys/trydocker.pem"
-elif region == "sa-east-1":
-    key_file = f"../../../../Braket/keys/graphene-{region}.pem"    
-else:
-    key_file = f"../../../../Braket/keys/graphene_{region}.pem"    
-
+key_file = f"../../../../Braket/keys/maolinml2/{region}.pem"
 
 print(key_file)
 subprocess.run(['chmod', '400', key_file])
