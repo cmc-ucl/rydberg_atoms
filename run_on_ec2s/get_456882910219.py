@@ -23,7 +23,6 @@ regions = [
 ]
 
 import boto3
-import subprocess
 for region in regions:
     print(region)
 

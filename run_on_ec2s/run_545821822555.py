@@ -10,9 +10,9 @@ print(sys.argv[0])
 
 
 # Determine the files need to be run on each instance
-folder = "test_set"
 num_per_instance = 2
 
+folder = "train_set"
 if region == "us-east-1":
     # start_ind = 242
     start_ind = 128
@@ -20,7 +20,8 @@ elif region == "us-east-2":
     # start_ind = 236
     start_ind = 140
 elif region == "us-west-1":
-    start_ind = 230
+    # start_ind = 230
+    start_ind = 116
 elif region == "us-west-2":
     # start_ind = 224
     start_ind = 134
@@ -35,11 +36,14 @@ elif region == "eu-west-2":
 elif region == "ap-northeast-3":
     start_ind = 194
 elif region == "ap-northeast-2":
-    start_ind = 188
+    # start_ind = 188
+    start_ind = 110
 elif region == "ap-northeast-1":
-    start_ind = 182
+    # start_ind = 182
+    start_ind = 104
 elif region == "ap-southeast-2":
-    start_ind = 176
+    # start_ind = 176
+    start_ind = 98
 elif region == "ap-southeast-1":
     start_ind = 170
 elif region == "eu-central-1":
@@ -50,6 +54,49 @@ elif region == "eu-west-3":
     start_ind = 152
 elif region == "sa-east-1":
     start_ind = 146
+
+# folder = "test_set"
+# if region == "us-east-1":
+#     # start_ind = 242
+#     start_ind = 128
+# elif region == "us-east-2":
+#     # start_ind = 236
+#     start_ind = 140
+# elif region == "us-west-1":
+#     # start_ind = 230
+#     start_ind = 116
+# elif region == "us-west-2":
+#     # start_ind = 224
+#     start_ind = 134
+# elif region == "ap-south-1":
+#     start_ind = 218
+# elif region == "ca-central-1":
+#     start_ind = 212
+# elif region == "eu-north-1":
+#     start_ind = 206
+# elif region == "eu-west-2":
+#     start_ind = 200
+# elif region == "ap-northeast-3":
+#     start_ind = 194
+# elif region == "ap-northeast-2":
+#     # start_ind = 188
+#     start_ind = 110
+# elif region == "ap-northeast-1":
+#     # start_ind = 182
+#     start_ind = 104
+# elif region == "ap-southeast-2":
+#     # start_ind = 176
+#     start_ind = 98
+# elif region == "ap-southeast-1":
+#     start_ind = 170
+# elif region == "eu-central-1":
+#     start_ind = 164
+# elif region == "eu-west-1":
+#     start_ind = 158
+# elif region == "eu-west-3":
+#     start_ind = 152
+# elif region == "sa-east-1":
+#     start_ind = 146
 
 
 # Get the instances in that region

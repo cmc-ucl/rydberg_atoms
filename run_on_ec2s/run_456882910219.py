@@ -17,39 +17,40 @@ num_per_instance = 2
 if region == "us-east-1":
     start_ind = 122
 elif region == "us-east-2":
-    start_ind = 116
+    start_ind = 0
 elif region == "us-west-1":
-    start_ind = 110
+    start_ind = 6
 elif region == "us-west-2":
-    start_ind = 104
+    start_ind = 12
 elif region == "ap-south-1":
-    start_ind = 98
-elif region == "ca-central-1":
-    # start_ind = 92 # Skip this one because 94 has been run
-    start_ind = 86
-elif region == "eu-north-1":
-    start_ind = 80
-elif region == "eu-west-2":
-    start_ind = 74
+    start_ind = 18
 elif region == "ap-northeast-3":
-    start_ind = 68
+    start_ind = 24
 elif region == "ap-northeast-2":
-    start_ind = 62
+    start_ind = 30
 elif region == "ap-northeast-1":
-    start_ind = 56
+    start_ind = 36
 elif region == "ap-southeast-2":
-    start_ind = 50
+    # Skip 42, 48 because 47, 48 has been done
+    start_ind = 54
 elif region == "ap-southeast-1":
-    # start_ind = 44 # Skip this one because 47 48 has been run
-    start_ind = 38
+    start_ind = 60
+elif region == "eu-west-2":
+    start_ind = 66
+elif region == "eu-north-1":
+    start_ind = 72
+elif region == "ca-central-1":
+    start_ind = 78
 elif region == "eu-central-1":
-    start_ind = 32
+    start_ind = 84
 elif region == "eu-west-1":
-    start_ind = 26
+    # Skip 90 because 94, 95 has been done
+    start_ind = 96
 elif region == "eu-west-3":
-    start_ind = 20
+    # start_ind = 92 # Skip this one because 94, 95 has been run
+    start_ind = 102
 elif region == "sa-east-1":
-    start_ind = 14
+    start_ind = 108
 
 
 # Get the instances in that region
@@ -95,6 +96,8 @@ for (ind, ec2_address) in enumerate(ec2_addresses):
             "scp", 
             "-i", 
             key_file,
+            "-o",
+            "StrictHostKeyChecking=no",
             file_name,
             ec2_address
         ]
@@ -106,6 +109,8 @@ for (ind, ec2_address) in enumerate(ec2_addresses):
         "scp", 
         "-i", 
         key_file,
+        "-o",
+        "StrictHostKeyChecking=no",
         file_name,
         ec2_address
     ]
