@@ -14,48 +14,41 @@ num_per_instance = 2
 
 folder = "train_set"
 if region == "us-east-1":
-    # start_ind = 242
-    start_ind = 128
+    start_ind = 0
 elif region == "us-east-2":
-    # start_ind = 236
-    start_ind = 140
+    start_ind = 6
 elif region == "us-west-1":
-    # start_ind = 230
-    start_ind = 116
+    start_ind = 12
 elif region == "us-west-2":
-    # start_ind = 224
-    start_ind = 134
+    start_ind = 18
 elif region == "ap-south-1":
-    start_ind = 218
+    start_ind = 24
 elif region == "ca-central-1":
-    start_ind = 212
+    start_ind = 30
 elif region == "eu-north-1":
-    start_ind = 206
+    start_ind = 36
 elif region == "eu-west-2":
-    start_ind = 200
+    start_ind = 42
 elif region == "ap-northeast-3":
-    start_ind = 194
+    start_ind = 48
 elif region == "ap-northeast-2":
-    # start_ind = 188
-    start_ind = 110
+    start_ind = 54
 elif region == "ap-northeast-1":
-    # start_ind = 182
-    start_ind = 104
+    start_ind = 60
 elif region == "ap-southeast-2":
-    # start_ind = 176
-    start_ind = 98
+    start_ind = 66
 elif region == "ap-southeast-1":
-    start_ind = 170
+    start_ind = 72
 elif region == "eu-central-1":
-    start_ind = 164
+    start_ind = 78
 elif region == "eu-west-1":
-    start_ind = 158
+    start_ind = 84
 elif region == "eu-west-3":
-    start_ind = 152
+    start_ind = 96
 elif region == "sa-east-1":
-    start_ind = 146
+    start_ind = 102
 
-# folder = "test_set"
+############# folder = "test_set"
 # if region == "us-east-1":
 #     # start_ind = 242
 #     start_ind = 128

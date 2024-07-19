@@ -90,15 +90,24 @@ for region in regions:
         status = command['Status']
         print(instance_id, status)
 
-        if status == "Success":
-            # print(ec2_address)
-            command = [
-                "scp", 
-                "-i", 
-                key_file,
-                f"{ec2_address}/home/ec2-user/graphene_*",
-                "."
-            ]
-            subprocess.run(command)
+        # if status == "Success":
+        #     # print(ec2_address)
+        #     command = [
+        #         "scp", 
+        #         "-i", 
+        #         key_file,
+        #         f"{ec2_address}/home/ec2-user/graphene_*",
+        #         "."
+        #     ]
+        #     subprocess.run(command)
+        # elif status in ["TimeOut", "FAILED"]:
+        #     command = [
+        #         "scp", 
+        #         "-i", 
+        #         key_file,
+        #         f"{ec2_address}/home/ec2-user/graphene_*",
+        #         "failed_tasks"
+        #     ]
+        #     subprocess.run(command)
 
     print()
