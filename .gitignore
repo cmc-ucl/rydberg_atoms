@@ -1,3 +1,7 @@
+data/
+rydberg_atoms_local/
+.DS_store
+
 #CRYSTAL specific
 *.f*
 *.hessopt
