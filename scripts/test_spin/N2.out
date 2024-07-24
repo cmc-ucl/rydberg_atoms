@@ -1,0 +1,199 @@
+
+Geometry optimization cycle 1
+Cartesian coordinates (Angstrom)
+ Atom        New coordinates             dX        dY        dZ
+   N   0.000000   0.000000   0.000000    0.000000  0.000000  0.000000
+   N   0.000000   0.000000   1.200000    0.000000  0.000000  0.000000
+converged SCF energy = -109.414002423583
+--------------- RKS_Scanner gradients ---------------
+         x                y                z
+0 N     0.0000000000     0.0000000000    -0.2325942658
+1 N     0.0000000000    -0.0000000000     0.2325942658
+----------------------------------------------
+cycle 1: E = -109.414002424  dE = -109.414  norm(grad) = 0.328938
+
+Geometry optimization cycle 2
+Cartesian coordinates (Angstrom)
+ Atom        New coordinates             dX        dY        dZ
+   N  -0.000000  -0.000000   0.058710   -0.000000 -0.000000  0.058710
+   N  -0.000000   0.000000   1.141290   -0.000000  0.000000 -0.058710
+converged SCF energy = -109.441304938626
+--------------- RKS_Scanner gradients ---------------
+         x                y                z
+0 N     0.0000000000     0.0000000000     0.0237256886
+1 N    -0.0000000000    -0.0000000000    -0.0237256886
+----------------------------------------------
+cycle 2: E = -109.441304939  dE = -0.0273025  norm(grad) = 0.0335532
+
+Geometry optimization cycle 3
+Cartesian coordinates (Angstrom)
+ Atom        New coordinates             dX        dY        dZ
+   N  -0.000000  -0.000000   0.053276   -0.000000 -0.000000 -0.005434
+   N   0.000000   0.000000   1.146724    0.000000  0.000000  0.005434
+converged SCF energy = -109.441438406553
+--------------- RKS_Scanner gradients ---------------
+         x                y                z
+0 N    -0.0000000000     0.0000000000    -0.0103007799
+1 N     0.0000000000    -0.0000000000     0.0103007799
+----------------------------------------------
+cycle 3: E = -109.441438407  dE = -0.000133468  norm(grad) = 0.0145675
+
+Geometry optimization cycle 4
+Cartesian coordinates (Angstrom)
+ Atom        New coordinates             dX        dY        dZ
+   N  -0.000000  -0.000000   0.054921    0.000000 -0.000000  0.001645
+   N   0.000000   0.000000   1.145079    0.000000  0.000000 -0.001645
+converged SCF energy = -109.441471386065
+--------------- RKS_Scanner gradients ---------------
+         x                y                z
+0 N     0.0000000000     0.0000000000    -0.0002718186
+1 N    -0.0000000000    -0.0000000000     0.0002718186
+----------------------------------------------
+cycle 4: E = -109.441471386  dE = -3.29795e-05  norm(grad) = 0.00038441
+
+Geometry optimization cycle 5
+Cartesian coordinates (Angstrom)
+ Atom        New coordinates             dX        dY        dZ
+   N  -0.000000  -0.000000   0.054966   -0.000000 -0.000000  0.000045
+   N   0.000000   0.000000   1.145034    0.000000  0.000000 -0.000045
+converged SCF energy = -109.441471408238
+--------------- RKS_Scanner gradients ---------------
+         x                y                z
+0 N    -0.0000000000    -0.0000000000     0.0000029784
+1 N    -0.0000000000     0.0000000000    -0.0000029785
+----------------------------------------------
+cycle 5: E = -109.441471408  dE = -2.21735e-08  norm(grad) = 4.21211e-06
+converged SCF energy = -109.44147140845
+**** MO energy ****
+MO #1   energy= -14.4827363716129  occ= 2
+MO #2   energy= -14.4807235754667  occ= 2
+MO #3   energy= -1.1578386827598   occ= 2
+MO #4   energy= -0.569598486785424 occ= 2
+MO #5   energy= -0.483192324875522 occ= 2
+MO #6   energy= -0.483192324875519 occ= 2
+MO #7   energy= -0.444305902832632 occ= 2
+MO #8   energy= -0.0109888527165546 occ= 0
+MO #9   energy= -0.0109888527165511 occ= 0
+MO #10  energy= 0.311495918611158  occ= 0
+MO #11  energy= 0.408096677372057  occ= 0
+MO #12  energy= 0.408096677372059  occ= 0
+MO #13  energy= 0.427932836646784  occ= 0
+MO #14  energy= 0.503674872888678  occ= 0
+MO #15  energy= 0.554545614536656  occ= 0
+MO #16  energy= 0.55454561453666   occ= 0
+MO #17  energy= 0.716394006734279  occ= 0
+MO #18  energy= 0.841718836550853  occ= 0
+MO #19  energy= 0.841718874819629  occ= 0
+MO #20  energy= 0.893003374994795  occ= 0
+MO #21  energy= 1.10953314491535   occ= 0
+MO #22  energy= 1.10953314491536   occ= 0
+MO #23  energy= 1.28052435134102   occ= 0
+MO #24  energy= 1.28052439279045   occ= 0
+MO #25  energy= 1.69548349678253   occ= 0
+MO #26  energy= 1.69870004617395   occ= 0
+MO #27  energy= 1.69870004617395   occ= 0
+MO #28  energy= 1.95426442649324   occ= 0
+MO #29  energy= 2.77707983682939   occ= 0
+MO #30  energy= 2.77707983682939   occ= 0
+MO #31  energy= 2.9408463458207    occ= 0
+MO #32  energy= 3.1227649672344    occ= 0
+MO #33  energy= 3.1227649672344    occ= 0
+MO #34  energy= 3.39031567282305   occ= 0
+MO #35  energy= 3.47503330290887   occ= 0
+MO #36  energy= 3.47503352204897   occ= 0
+MO #37  energy= 3.60595264266142   occ= 0
+MO #38  energy= 3.60595264266142   occ= 0
+MO #39  energy= 3.61683903669488   occ= 0
+MO #40  energy= 3.61683903669488   occ= 0
+MO #41  energy= 3.99900562935377   occ= 0
+MO #42  energy= 4.09481815132165   occ= 0
+MO #43  energy= 4.09481815132166   occ= 0
+MO #44  energy= 4.372550751732     occ= 0
+MO #45  energy= 4.37255263170716   occ= 0
+MO #46  energy= 4.49256275548382   occ= 0
+MO #47  energy= 4.49256275548384   occ= 0
+MO #48  energy= 4.5079043132108    occ= 0
+MO #49  energy= 4.50790645809839   occ= 0
+MO #50  energy= 4.65965316842131   occ= 0
+MO #51  energy= 4.94232488060298   occ= 0
+MO #52  energy= 4.94232525979875   occ= 0
+MO #53  energy= 5.02648731216483   occ= 0
+MO #54  energy= 5.02648731216483   occ= 0
+MO #55  energy= 5.13327028192782   occ= 0
+MO #56  energy= 5.74711059065627   occ= 0
+MO #57  energy= 6.46277541079896   occ= 0
+MO #58  energy= 6.46277541079897   occ= 0
+MO #59  energy= 6.5604351954451    occ= 0
+MO #60  energy= 16.2636492495952   occ= 0
+ ** Mulliken atomic charges  **
+charge of    0N =      0.00000
+charge of    1N =     -0.00000
+Dipole moment(X, Y, Z, Debye): -0.00000, -0.00000, -0.00000
+ ** Mulliken pop  **
+pop of  0 N 1s            1.95056
+pop of  0 N 2s            0.97115
+pop of  0 N 3s            0.24498
+pop of  0 N 4s            0.59883
+pop of  0 N 2px           0.26306
+pop of  0 N 2py           0.26306
+pop of  0 N 2pz           0.43696
+pop of  0 N 3px           0.47313
+pop of  0 N 3py           0.47313
+pop of  0 N 3pz           0.61412
+pop of  0 N 4px           0.23568
+pop of  0 N 4py           0.23568
+pop of  0 N 4pz           0.16213
+pop of  0 N 3dxy          0.00000
+pop of  0 N 3dyz          0.00445
+pop of  0 N 3dz^2         0.00816
+pop of  0 N 3dxz          0.00445
+pop of  0 N 3dx2-y2       0.00000
+pop of  0 N 4dxy          0.00000
+pop of  0 N 4dyz          0.02143
+pop of  0 N 4dz^2         0.01180
+pop of  0 N 4dxz          0.02143
+pop of  0 N 4dx2-y2       0.00000
+pop of  0 N 4f-3          0.00000
+pop of  0 N 4f-2          0.00000
+pop of  0 N 4f-1          0.00226
+pop of  0 N 4f+0          0.00131
+pop of  0 N 4f+1          0.00226
+pop of  0 N 4f+2          0.00000
+pop of  0 N 4f+3          0.00000
+pop of  1 N 1s            1.95056
+pop of  1 N 2s            0.97115
+pop of  1 N 3s            0.24498
+pop of  1 N 4s            0.59883
+pop of  1 N 2px           0.26306
+pop of  1 N 2py           0.26306
+pop of  1 N 2pz           0.43696
+pop of  1 N 3px           0.47313
+pop of  1 N 3py           0.47313
+pop of  1 N 3pz           0.61412
+pop of  1 N 4px           0.23568
+pop of  1 N 4py           0.23568
+pop of  1 N 4pz           0.16213
+pop of  1 N 3dxy          0.00000
+pop of  1 N 3dyz          0.00445
+pop of  1 N 3dz^2         0.00816
+pop of  1 N 3dxz          0.00445
+pop of  1 N 3dx2-y2       0.00000
+pop of  1 N 4dxy          0.00000
+pop of  1 N 4dyz          0.02143
+pop of  1 N 4dz^2         0.01180
+pop of  1 N 4dxz          0.02143
+pop of  1 N 4dx2-y2       0.00000
+pop of  1 N 4f-3          0.00000
+pop of  1 N 4f-2          0.00000
+pop of  1 N 4f-1          0.00226
+pop of  1 N 4f+0          0.00131
+pop of  1 N 4f+1          0.00226
+pop of  1 N 4f+2          0.00000
+pop of  1 N 4f+3          0.00000
+ ** Mulliken atomic charges  **
+charge of    0N =      0.00000
+charge of    1N =     -0.00000
+Dipole moment(X, Y, Z, Debye): -0.00000, -0.00000, -0.00000
+Number of alpha electrons: 7
+Number of beta electrons: 7
+Spin multiplicity: 1
