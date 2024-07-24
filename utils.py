@@ -1,4 +1,139 @@
 import numpy as np
+import copy
+from pymatgen.core.structure import Structure
+
+
+
+def get_all_configurations(gui_object):
+
+    symmops = np.array(gui_object.symmops)
+    coordinates = np.array(gui_object.atom_positions)
+    n_symmops = gui_object.n_symmops
+    atom_numbers = np.array(gui_object.atom_number)
+    lattice = gui_object.lattice
+    
+    original_structure = Structure(lattice,atom_numbers,coordinates,coords_are_cartesian=True)
+
+        
+        
+    rotations = []
+    translation = []
+    for symmop in symmops:
+        rotations.append(symmop[0:3])
+        translation.append(symmop[3:4])
+    atom_indices = []
+    structures = []
+    for i in range(n_symmops):
+        atom_indices_tmp = []
+        coordinates_new = np.matmul(coordinates,rotations[i])+np.tile(translation[i], (len(atom_numbers),1))
+
+        #lattice_new = np.matmul(lattice,rotations[i])+np.tile(translation[i], (3,1))
+        structure_tmp = Structure(lattice,atom_numbers,coordinates_new,coords_are_cartesian=True)
+        for k,coord in enumerate(original_structure.frac_coords):
+            structure_tmp.append(original_structure.atomic_numbers[k],coord,coords_are_cartesian=False,validate_proximity=False)
+        for m in range(len(atom_numbers)):
+            index = len(atom_numbers)+m
+            for n in range(len(atom_numbers)):
+                if structure_tmp.sites[n].is_periodic_image(structure_tmp.sites[index]):
+                    #print(m,n)
+                    atom_indices_tmp.append(n)
+                    break
+        atom_indices.append(atom_indices_tmp)
+
+    return atom_indices
+
+
+def build_test_train_set(structures_train,energies_train,atom_indices,N_atom):
+    all_configurations = []
+    all_energies = []
+    #energies = list(chain(*graphene_allN_cry_energy_norm[1:max_N]))
+    
+    for i,structure in enumerate(structures_train):
+        
+        N_index = np.where(np.array(structure.atomic_numbers)==N_atom)[0]
+        
+        all_configurations.extend(build_symmetry_equivalent_configurations(atom_indices,N_index).tolist())
+        all_energies.extend([energies_train[i]]*len(build_symmetry_equivalent_configurations(atom_indices,N_index)))
+        #print(i,len(all_configurations))
+    all_configurations = np.array(all_configurations)
+    all_energies = np.array(all_energies)
+    
+    return all_configurations, all_energies
+
+
+def generate_random_structures(initial_structure,atom_indices,N_atoms,new_species,N_config,DFT_config,active_sites=False,return_multiplicity=False,molecule=False):
+    
+    #N_atoms: number of sites to replace
+    #N_config: number of attempts
+    #DFT_config: number of final structures generated
+    #new_species: new atomic number
+    #active_sites: sites in the structure to replace (useful for Al/GaN)
+    #atom_indices: indices obtained from get_all_configurations
+    #Returns: symmetry independent structures
+
+    all_structures = []
+
+    
+    if active_sites is False:
+        num_sites = initial_structure.num_sites
+        active_sites = np.arange(num_sites)
+    else:
+        num_sites = len(active_sites)
+        
+    
+
+    # Generate a random configurations
+    descriptor_all = []
+    structures_all = []
+    config_all = []
+    config_unique = []
+    config_unique_count = []
+    n_sic = 0
+    N_attempts= 0
+    
+    while n_sic < DFT_config and N_attempts <N_config:
+        N_attempts += 1
+        sites_index = np.random.choice(num_sites,N_atoms,replace=False)
+        sites = active_sites[sites_index]
+        structure_tmp = copy.deepcopy(initial_structure)
+        sec = build_symmetry_equivalent_configurations(atom_indices,sites)
+#         print(sec[0],np.lexsort(sec,axis=0))
+#         print(np.where(np.array(sec)==1))
+        # I don't need this if np.unique returns sorted arrays
+#         sic = sec[np.lexsort(sec,axis=0)][0]
+        sic = sec[0]
+        
+        is_in_config_unique = any(np.array_equal(sic, existing_sic) for existing_sic in config_unique)
+
+        if not is_in_config_unique:  
+            config_unique.append(sic)
+
+            config_unique_count.append(len(sec))
+            n_sic += 1
+
+
+    final_structures = []
+
+    for config in config_unique:
+
+        N_index = np.where(config==1)[0]
+        structure_tmp = copy.deepcopy(initial_structure)
+        
+        if molecule == True:
+            atom_types = np.array(structure_tmp.atomic_numbers)
+            coordinates = structure_tmp.cart_coords
+            
+            atom_types[N_index] = new_species
+                
+            structure_tmp = Molecule(atom_types,coordinates)
+        else:
+            for N in N_index:
+                structure_tmp.replace(N,new_species)
+        final_structures.append(structure_tmp)
+    if return_multiplicity == True:
+        return final_structures,config_unique_count
+    else:
+        return final_structures
 
 
 def build_symmetry_equivalent_configurations(atom_indices,N_index):
@@ -20,9 +155,10 @@ def build_symmetry_equivalent_configurations(atom_indices,N_index):
                                              means there is a dopant atom in 
                                              position i
     """
-    #if len(N_index) == 0:
+    if len(N_index) == 0:
 
         #return np.tile(np.zeros(len(atom_indices[0]),dtype='int'), (len(atom_indices), 1))
+        return np.array([np.zeros(len(atom_indices[0]),dtype='int')]) # TEST
     configurations = atom_indices == -1
     for index in N_index:
         configurations += atom_indices == index
