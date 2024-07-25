@@ -350,6 +350,101 @@ def get_all_configurations_pmg_mol(structure_pmg,prec=6):
 
     return atom_indices
 
+
+#Build all configurations (complete set)
+def build_test_train_set(structures_train,energies_train,atom_indices,N_atom):
+    all_configurations = []
+    all_energies = []
+    #energies = list(chain(*graphene_allN_cry_energy_norm[1:max_N]))
+    
+    for i,structure in enumerate(structures_train):
+        
+        N_index = np.where(np.array(structure.atomic_numbers)==N_atom)[0]
+        
+        all_configurations.extend(build_symmetry_equivalent_configurations(atom_indices,N_index).tolist())
+        all_energies.extend([energies_train[i]]*len(build_symmetry_equivalent_configurations(atom_indices,N_index)))
+        #print(i,len(all_configurations))
+    all_configurations = np.array(all_configurations)
+    all_energies = np.array(all_energies)
+    
+    return all_configurations, all_energies
+
+def build_ml_qubo(structure,X_train,y_train,max_neigh=1):
+    
+    #Filter
+    distance_matrix = np.round(structure.distance_matrix,5)
+    shells = np.unique(np.round(distance_matrix,5))
+    num_sites = structure.num_sites
+    distance_matrix_filter = np.zeros((num_sites,num_sites),int)
+
+    for i,s in enumerate(shells[0:max_neigh+1]):
+        row_index = np.where(distance_matrix == s)[0]
+        col_index = np.where(distance_matrix == s)[1]
+        distance_matrix_filter[row_index,col_index] = i
+    distance_matrix_filter = np.triu(distance_matrix_filter,0)
+    np.fill_diagonal(distance_matrix_filter,[1]*num_sites)
+    
+    #Build the descriptor
+
+    upper_tri_indices = np.where(distance_matrix_filter != 0)
+    descriptor = []
+
+    for config in X_train:
+        matrix = np.outer(config,config)
+        upper_tri_elements = matrix[upper_tri_indices]
+        descriptor.append(upper_tri_elements)
+        
+
+#     descriptor_all = []
+#     for config in all_configurations:
+#         matrix = np.outer(config,config)
+#         upper_tri_elements = matrix[upper_tri_indices]
+#         descriptor_all.append(upper_tri_elements)
+    
+    descriptor = np.array(descriptor)
+    
+    from sklearn.linear_model import LinearRegression
+    
+    
+    reg = LinearRegression() #create the object
+    reg.fit(descriptor, y_train)
+    
+    print('R2: ',reg.score(descriptor, y_train))
+
+    Q = np.zeros((num_sites,num_sites))
+    Q[upper_tri_indices] = reg.coef_
+    
+    return Q
+
+def get_qubo_energies(Q,all_configurations):
+    
+    predicted_energy = []
+    
+    for i,config in enumerate(all_configurations):
+        predicted_energy.append(classical_energy(config,Q))
+    
+    return predicted_energy
+
+
+# In[37]:
+
+
+def test_qubo_energies(y_pred,y_dft):
+    
+    from sklearn.metrics import mean_squared_error as mse
+    
+    return mse(y_pred, y_dft)
+
+
+# In[36]:
+
+
+def test_qubo_energies_mape(y_pred,y_dft):
+    
+    from sklearn.metrics import mean_absolute_percentage_error as mse
+    
+    return mse(y_pred, y_dft)
+
 def build_symmetry_equivalent_configurations(atom_indices,N_index):
     
     if len(N_index) == 0:
