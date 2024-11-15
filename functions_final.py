@@ -524,3 +524,84 @@ def generate_random_structures_mol(initial_structure,atom_indices,N_atoms,new_sp
         return final_structures
 
 
+#ORIGINAL: THIS WORKS, DO NOT MODIFY
+# def build_ml_h_ryd(structure_pbc,X_train,y_train,max_neigh=1):
+    
+    C = 5.42e-18#5.42e-24
+    Delta_g = 1#-1.25e8
+    from pymatgen.core.structure import Molecule
+    structure = Molecule(structure_pbc.atomic_numbers,structure_pbc.cart_coords)
+    #Filter
+    distance_matrix = np.round(structure.distance_matrix,5)
+    #print(distance_matrix)
+    shells = np.unique(np.round(distance_matrix,5))
+    num_sites = structure.num_sites
+    distance_matrix_filter = np.zeros((num_sites,num_sites),float)
+    
+    ryd_param = [1,1,1/27]
+    ryd_param = [1,1,1/27,1/343]
+    
+    for i,s in enumerate(shells[0:max_neigh+1]):
+        row_index = np.where(distance_matrix == s)[0]
+        col_index = np.where(distance_matrix == s)[1]
+        distance_matrix_filter[row_index,col_index] = ryd_param[i]
+    distance_matrix_filter = np.triu(distance_matrix_filter,0)
+
+    #print(distance_matrix_filter[5])    
+    
+    #Build the descriptor
+
+    upper_tri_indices = np.where(distance_matrix_filter != 0.)
+    descriptor = []
+    descriptor_test = []
+    for config in X_train:
+        matrix = np.outer(config,config)*distance_matrix_filter #matrix[i][j] == 1 if i and j are ==1
+        upper_tri_elements = matrix[upper_tri_indices]
+        
+        descriptor.append(upper_tri_elements)
+        diag = np.sum(matrix.diagonal())
+        diag_all = matrix.diagonal().tolist()
+        all_terms = np.sum(upper_tri_elements)
+        diag_all.append(all_terms-diag)
+        
+        descriptor_test.append([diag,all_terms-diag])
+        #descriptor_test.append(diag_all)
+    #print(descriptor_test)
+
+#     descriptor_all = []
+#     for config in all_configurations:
+#         matrix = np.outer(config,config)
+#         upper_tri_elements = matrix[upper_tri_indices]
+#         descriptor_all.append(upper_tri_elements)
+    descriptor  = copy.deepcopy(descriptor_test)
+    descriptor = np.array(descriptor)
+    
+    from sklearn.linear_model import LinearRegression
+    
+    
+    reg = LinearRegression() #create the object
+    reg.fit(descriptor, y_train)
+    print(reg.coef_)
+    print('R2: ',reg.score(descriptor, y_train))
+    
+    
+    ##########QUBO E
+    Q_structure = np.zeros((num_sites,num_sites),float)
+    distance_matrix = build_adjacency_matrix(structure,max_neigh=2)
+    
+    #print(Q_structure)
+    nn = np.where(distance_matrix==1)
+
+    Q_structure[nn] = reg.coef_[1]-(reg.coef_[1]*1/27)
+    #print(reg.coef_[1],Q_structure[nn])
+    nnn = np.where(distance_matrix==2)
+    Q_structure[nnn] = reg.coef_[1]*1/27
+    #print(Q_structure[nnn])
+    # Add the chemical potential (still calling it J1)
+    #J1 += J1*mu
+    np.fill_diagonal(Q_structure,reg.coef_[0])
+    
+#     Q = np.zeros((num_sites,num_sites))
+#     Q[upper_tri_indices] = reg.coef_
+    #print(np.unique(Q_structure))
+    return Q_structure
