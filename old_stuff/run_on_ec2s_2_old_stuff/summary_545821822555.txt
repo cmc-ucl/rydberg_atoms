@@ -1,0 +1,879 @@
+(base) maolinml@3c06303dc09d run_on_ec2s_2 % python get_running_tasks.py
+ap-northeast-3_13-208-169-53
+total 408
+-rw-r--r--. 1 ec2-user ec2-user     0 Jul 19 23:57 logfile
+-rw-r--r--. 1 root     root     92648 Jul 19 23:53 graphene_mol_r_6_6_h_194.out
+-rw-r--r--. 1 root     root     79415 Jul 19 22:08 graphene_mol_r_6_6_h_195.out
+-rw-r--r--. 1 root     root     13253 Jul 19 21:21 graphene_mol_r_6_6_h_48.out
+-rw-r--r--. 1 root     root     13276 Jul 19 04:26 graphene_mol_r_6_6_h_49.out
+-rw-r--r--. 1 ec2-user ec2-user   349 Jul 18 08:55 batch_run.py
+-rw-r--r--. 1 ec2-user ec2-user  5602 Jul 18 08:55 graphene_mol_r_6_6_h_49.py
+-rw-r--r--. 1 ec2-user ec2-user  5602 Jul 18 08:55 graphene_mol_r_6_6_h_48.py
+-rw-r--r--. 1 root     root     77393 Jul 18 03:05 graphene_mol_r_6_6_h_195.json
+-rw-r--r--. 1 root     root      3163 Jul 18 03:05 graphene_mol_r_6_6_h_195.xyz
+-rw-r--r--. 1 root     root     77410 Jul 18 02:42 graphene_mol_r_6_6_h_194.json
+-rw-r--r--. 1 root     root      3170 Jul 18 02:42 graphene_mol_r_6_6_h_194.xyz
+drwxr-xr-x. 5 root     root        74 Jul 16 07:48 Graphene_venv
+-rw-r--r--. 1 ec2-user ec2-user  5619 Jul 16 07:48 graphene_mol_r_6_6_h_195.py
+-rw-r--r--. 1 ec2-user ec2-user  5619 Jul 16 07:48 graphene_mol_r_6_6_h_194.py
+
+eu-west-3_13-39-84-15
+total 100
+-rw-r--r--. 1 ec2-user ec2-user     0 Jul 20 00:00 logfile
+-rw-r--r--. 1 root     root     13254 Jul 19 17:50 graphene_mol_r_6_6_h_157.out
+-rw-r--r--. 1 root     root     13275 Jul 19 09:01 graphene_mol_r_6_6_h_101.out
+-rw-r--r--. 1 root     root     13275 Jul 19 09:01 graphene_mol_r_6_6_h_100.out
+-rw-r--r--. 1 root     root     13276 Jul 19 05:34 graphene_mol_r_6_6_h_156.out
+-rw-r--r--. 1 ec2-user ec2-user   349 Jul 18 08:58 batch_run.py
+-rw-r--r--. 1 ec2-user ec2-user  5610 Jul 18 08:58 graphene_mol_r_6_6_h_101.py
+-rw-r--r--. 1 ec2-user ec2-user  5610 Jul 18 08:58 graphene_mol_r_6_6_h_100.py
+drwxr-xr-x. 5 root     root        74 Jul 16 08:05 Graphene_venv
+-rw-r--r--. 1 ec2-user ec2-user  5615 Jul 16 08:05 graphene_mol_r_6_6_h_157.py
+-rw-r--r--. 1 ec2-user ec2-user  5616 Jul 16 08:05 graphene_mol_r_6_6_h_156.py
+
+ap-south-1_43-204-141-184
+total 480
+-rw-r--r--. 1 ec2-user ec2-user      0 Jul 19 23:55 logfile
+-rw-r--r--. 1 root     root     119114 Jul 19 23:37 graphene_mol_r_6_6_h_27.out
+-rw-r--r--. 1 root     root     113155 Jul 19 22:12 graphene_mol_r_6_6_h_221.out
+-rw-r--r--. 1 root     root     113160 Jul 19 21:25 graphene_mol_r_6_6_h_26.out
+-rw-r--r--. 1 root     root      13273 Jul 19 11:05 graphene_mol_r_6_6_h_220.out
+-rw-r--r--. 1 ec2-user ec2-user    349 Jul 18 08:52 batch_run.py
+-rw-r--r--. 1 ec2-user ec2-user   5599 Jul 18 08:52 graphene_mol_r_6_6_h_27.py
+-rw-r--r--. 1 ec2-user ec2-user   5599 Jul 18 08:52 graphene_mol_r_6_6_h_26.py
+-rw-r--r--. 1 root     root      77419 Jul 18 05:09 graphene_mol_r_6_6_h_221.json
+-rw-r--r--. 1 root     root       3161 Jul 18 05:09 graphene_mol_r_6_6_h_221.xyz
+-rw-r--r--. 1 ec2-user ec2-user   5624 Jul 16 07:36 graphene_mol_r_6_6_h_221.py
+-rw-r--r--. 1 ec2-user ec2-user   5621 Jul 16 07:36 graphene_mol_r_6_6_h_220.py
+drwxr-xr-x. 5 root     root         74 Jul 16 00:16 Graphene_venv
+
+eu-west-2_35-178-94-8
+total 316
+-rw-r--r--. 1 ec2-user ec2-user      0 Jul 19 23:57 logfile
+-rw-r--r--. 1 root     root     126386 Jul 19 21:40 graphene_mol_r_6_6_h_42.out
+-rw-r--r--. 1 root     root     126385 Jul 19 21:39 graphene_mol_r_6_6_h_43.out
+-rw-r--r--. 1 root     root       7327 Jul 19 20:31 graphene_mol_r_6_6_h_200.out
+-rw-r--r--. 1 root     root      13276 Jul 19 17:28 graphene_mol_r_6_6_h_201.out
+-rw-r--r--. 1 ec2-user ec2-user    349 Jul 18 08:55 batch_run.py
+-rw-r--r--. 1 ec2-user ec2-user   5599 Jul 18 08:55 graphene_mol_r_6_6_h_43.py
+-rw-r--r--. 1 ec2-user ec2-user   5599 Jul 18 08:55 graphene_mol_r_6_6_h_42.py
+-rw-r--r--. 1 ec2-user ec2-user   5622 Jul 16 06:16 graphene_mol_r_6_6_h_201.py
+-rw-r--r--. 1 ec2-user ec2-user   5622 Jul 16 06:16 graphene_mol_r_6_6_h_200.py
+drwxr-xr-x. 2 root     root          6 Jul 16 05:04 test_ss13
+drwxr-xr-x. 2 root     root          6 Jul 16 04:55 test_ss12
+drwxr-xr-x. 2 root     root          6 Jul 16 04:54 test_ss11
+drwxr-xr-x. 2 root     root          6 Jul 16 04:54 test_ss10
+drwxr-xr-x. 2 root     root          6 Jul 16 04:54 test_ss9
+drwxr-xr-x. 2 root     root          6 Jul 16 04:53 test_ss8
+drwxr-xr-x. 2 root     root          6 Jul 16 04:53 test_ss7
+drwxr-xr-x. 2 root     root          6 Jul 16 04:52 test_ss6
+drwxr-xr-x. 2 root     root          6 Jul 16 04:50 test_ss5
+drwxr-xr-x. 2 root     root          6 Jul 16 04:41 test_ss4
+drwxr-xr-x. 2 root     root          6 Jul 16 04:40 test_ss3
+drwxr-xr-x. 2 root     root          6 Jul 16 04:38 test_ss2
+drwxr-xr-x. 5 root     root         74 Jul 16 03:55 Graphene_venv
+
+ap-northeast-3_15-168-37-8
+total 112
+-rw-r--r--. 1 ec2-user ec2-user     0 Jul 19 23:58 logfile
+-rw-r--r--. 1 root     root     26505 Jul 19 22:56 graphene_mol_r_6_6_h_52.out
+-rw-r--r--. 1 root     root     13253 Jul 19 10:07 graphene_mol_r_6_6_h_53.out
+-rw-r--r--. 1 root     root     13276 Jul 19 07:13 graphene_mol_r_6_6_h_198.out
+-rw-r--r--. 1 root     root     13276 Jul 19 01:22 graphene_mol_r_6_6_h_199.out
+-rw-r--r--. 1 ec2-user ec2-user   349 Jul 18 08:55 batch_run.py
+-rw-r--r--. 1 ec2-user ec2-user  5602 Jul 18 08:55 graphene_mol_r_6_6_h_53.py
+-rw-r--r--. 1 ec2-user ec2-user  5602 Jul 18 08:55 graphene_mol_r_6_6_h_52.py
+drwxr-xr-x. 5 root     root        74 Jul 16 07:48 Graphene_venv
+-rw-r--r--. 1 ec2-user ec2-user  5622 Jul 16 07:48 graphene_mol_r_6_6_h_199.py
+-rw-r--r--. 1 ec2-user ec2-user  5622 Jul 16 07:48 graphene_mol_r_6_6_h_198.py
+
+us-east-1_54-160-224-126
+total 1840
+-rw-r--r--. 1 ec2-user ec2-user      0 Jul 19 23:48 logfile
+-rw-r--r--. 1 root     root      77395 Jul 19 18:53 graphene_mol_r_6_6_h_242.json
+-rw-r--r--. 1 root     root     383680 Jul 19 18:53 graphene_mol_r_6_6_h_242.out
+-rw-r--r--. 1 root     root       3187 Jul 19 18:53 graphene_mol_r_6_6_h_242.xyz
+-rw-r--r--. 1 root     root      77411 Jul 19 15:21 graphene_mol_r_6_6_h_243.json
+-rw-r--r--. 1 root     root     383676 Jul 19 15:21 graphene_mol_r_6_6_h_243.out
+-rw-r--r--. 1 root     root       3202 Jul 19 15:21 graphene_mol_r_6_6_h_243.xyz
+-rw-r--r--. 1 root     root      77396 Jul 19 12:50 graphene_mol_r_6_6_h_128.json
+-rw-r--r--. 1 root     root     370447 Jul 19 12:50 graphene_mol_r_6_6_h_128.out
+-rw-r--r--. 1 root     root       3186 Jul 19 12:50 graphene_mol_r_6_6_h_128.xyz
+-rw-r--r--. 1 root     root      77357 Jul 19 10:28 graphene_mol_r_6_6_h_129.json
+-rw-r--r--. 1 root     root     357222 Jul 19 10:28 graphene_mol_r_6_6_h_129.out
+-rw-r--r--. 1 root     root       3218 Jul 19 10:28 graphene_mol_r_6_6_h_129.xyz
+drwxr-xr-x. 2 ec2-user ec2-user      6 Jul 19 06:40 trytry2
+drwxr-xr-x. 2 ec2-user ec2-user      6 Jul 19 06:38 trytry
+-rw-r--r--. 1 ec2-user ec2-user    349 Jul 17 20:33 batch_run.py
+-rw-r--r--. 1 ec2-user ec2-user   5613 Jul 17 20:33 graphene_mol_r_6_6_h_129.py
+-rw-r--r--. 1 ec2-user ec2-user   5613 Jul 17 20:33 graphene_mol_r_6_6_h_128.py
+-rw-r--r--. 1 ec2-user ec2-user   5625 Jul 16 07:34 graphene_mol_r_6_6_h_243.py
+-rw-r--r--. 1 ec2-user ec2-user   5624 Jul 16 07:34 graphene_mol_r_6_6_h_242.py
+drwxr-xr-x. 5 root     root         74 Jul 15 23:07 Graphene_venv
+
+us-west-2_34-216-198-118
+total 1384
+-rw-r--r--. 1 ec2-user ec2-user      0 Jul 19 23:49 logfile
+-rw-r--r--. 1 root     root      77450 Jul 19 09:18 graphene_mol_r_6_6_h_138.json
+-rw-r--r--. 1 root     root     383692 Jul 19 09:18 graphene_mol_r_6_6_h_138.out
+-rw-r--r--. 1 root     root       3202 Jul 19 09:18 graphene_mol_r_6_6_h_138.xyz
+-rw-r--r--. 1 root     root      77381 Jul 19 05:00 graphene_mol_r_6_6_h_229.json
+-rw-r--r--. 1 root     root     357215 Jul 19 05:00 graphene_mol_r_6_6_h_229.out
+-rw-r--r--. 1 root     root       3214 Jul 19 05:00 graphene_mol_r_6_6_h_229.xyz
+-rw-r--r--. 1 root     root      77419 Jul 19 04:41 graphene_mol_r_6_6_h_139.json
+-rw-r--r--. 1 root     root     357222 Jul 19 04:41 graphene_mol_r_6_6_h_139.out
+-rw-r--r--. 1 root     root       3231 Jul 19 04:41 graphene_mol_r_6_6_h_139.xyz
+-rw-r--r--. 1 root     root      13253 Jul 18 00:40 graphene_mol_r_6_6_h_228.out
+-rw-r--r--. 1 ec2-user ec2-user    349 Jul 17 18:26 batch_run.py
+-rw-r--r--. 1 ec2-user ec2-user   5613 Jul 17 18:26 graphene_mol_r_6_6_h_139.py
+-rw-r--r--. 1 ec2-user ec2-user   5613 Jul 17 18:26 graphene_mol_r_6_6_h_138.py
+-rw-r--r--. 1 ec2-user ec2-user   5625 Jul 16 07:35 graphene_mol_r_6_6_h_229.py
+-rw-r--r--. 1 ec2-user ec2-user   5624 Jul 16 07:35 graphene_mol_r_6_6_h_228.py
+drwxr-xr-x. 5 root     root         74 Jul 15 23:49 Graphene_venv
+
+eu-west-1_34-244-36-135
+total 356
+-rw-r--r--. 1 ec2-user ec2-user      0 Jul 20 00:00 logfile
+-rw-r--r--. 1 root     root     139609 Jul 19 23:53 graphene_mol_r_6_6_h_88.out
+-rw-r--r--. 1 root     root     139619 Jul 19 23:49 graphene_mol_r_6_6_h_89.out
+-rw-r--r--. 1 root     root      13276 Jul 19 12:12 graphene_mol_r_6_6_h_162.out
+-rw-r--r--. 1 root     root      13276 Jul 19 11:03 graphene_mol_r_6_6_h_163.out
+-rw-r--r--. 1 ec2-user ec2-user    349 Jul 18 08:58 batch_run.py
+-rw-r--r--. 1 ec2-user ec2-user   5605 Jul 18 08:57 graphene_mol_r_6_6_h_89.py
+-rw-r--r--. 1 ec2-user ec2-user   5605 Jul 18 08:57 graphene_mol_r_6_6_h_88.py
+drwxr-xr-x. 5 root     root         74 Jul 16 08:04 Graphene_venv
+-rw-r--r--. 1 ec2-user ec2-user   5616 Jul 16 08:04 graphene_mol_r_6_6_h_163.py
+-rw-r--r--. 1 ec2-user ec2-user   5615 Jul 16 08:04 graphene_mol_r_6_6_h_162.py
+
+sa-east-1_54-94-78-204
+total 100
+-rw-r--r--. 1 ec2-user ec2-user     0 Jul 20 00:01 logfile
+-rw-r--r--. 1 root     root     13274 Jul 19 15:33 graphene_mol_r_6_6_h_107.out
+-rw-r--r--. 1 root     root     13274 Jul 19 13:35 graphene_mol_r_6_6_h_151.out
+-rw-r--r--. 1 root     root     13276 Jul 19 11:40 graphene_mol_r_6_6_h_106.out
+-rw-r--r--. 1 root     root     13276 Jul 19 08:59 graphene_mol_r_6_6_h_150.out
+-rw-r--r--. 1 ec2-user ec2-user   349 Jul 18 16:15 batch_run.py
+-rw-r--r--. 1 ec2-user ec2-user  5610 Jul 18 16:15 graphene_mol_r_6_6_h_107.py
+-rw-r--r--. 1 ec2-user ec2-user  5610 Jul 18 16:15 graphene_mol_r_6_6_h_106.py
+-rw-r--r--. 1 ec2-user ec2-user  5616 Jul 16 09:02 graphene_mol_r_6_6_h_151.py
+-rw-r--r--. 1 ec2-user ec2-user  5616 Jul 16 09:02 graphene_mol_r_6_6_h_150.py
+drwxr-xr-x. 5 root     root        74 Jul 16 08:10 Graphene_venv
+
+eu-west-3_15-188-62-59
+total 100
+-rw-r--r--. 1 ec2-user ec2-user     0 Jul 20 00:00 logfile
+-rw-r--r--. 1 root     root     13254 Jul 19 16:42 graphene_mol_r_6_6_h_96.out
+-rw-r--r--. 1 root     root     13274 Jul 19 15:09 graphene_mol_r_6_6_h_97.out
+-rw-r--r--. 1 root     root     13276 Jul 19 03:25 graphene_mol_r_6_6_h_152.out
+-rw-r--r--. 1 root     root     13275 Jul 19 01:08 graphene_mol_r_6_6_h_153.out
+-rw-r--r--. 1 ec2-user ec2-user   349 Jul 18 08:58 batch_run.py
+-rw-r--r--. 1 ec2-user ec2-user  5608 Jul 18 08:58 graphene_mol_r_6_6_h_97.py
+-rw-r--r--. 1 ec2-user ec2-user  5608 Jul 18 08:58 graphene_mol_r_6_6_h_96.py
+drwxr-xr-x. 5 root     root        74 Jul 16 08:05 Graphene_venv
+-rw-r--r--. 1 ec2-user ec2-user  5616 Jul 16 08:04 graphene_mol_r_6_6_h_153.py
+-rw-r--r--. 1 ec2-user ec2-user  5616 Jul 16 08:04 graphene_mol_r_6_6_h_152.py
+
+eu-west-1_54-195-216-231
+total 336
+-rw-r--r--. 1 ec2-user ec2-user      0 Jul 20 00:00 logfile
+-rw-r--r--. 1 root     root     132339 Jul 19 23:48 graphene_mol_r_6_6_h_84.out
+-rw-r--r--. 1 root     root     132342 Jul 19 23:35 graphene_mol_r_6_6_h_85.out
+-rw-r--r--. 1 root     root      13275 Jul 19 09:54 graphene_mol_r_6_6_h_159.out
+-rw-r--r--. 1 root     root      13275 Jul 19 09:18 graphene_mol_r_6_6_h_158.out
+-rw-r--r--. 1 ec2-user ec2-user    349 Jul 18 08:57 batch_run.py
+-rw-r--r--. 1 ec2-user ec2-user   5604 Jul 18 08:57 graphene_mol_r_6_6_h_85.py
+-rw-r--r--. 1 ec2-user ec2-user   5605 Jul 18 08:57 graphene_mol_r_6_6_h_84.py
+drwxr-xr-x. 5 root     root         74 Jul 16 08:04 Graphene_venv
+-rw-r--r--. 1 ec2-user ec2-user   5616 Jul 16 08:03 graphene_mol_r_6_6_h_159.py
+-rw-r--r--. 1 ec2-user ec2-user   5616 Jul 16 08:03 graphene_mol_r_6_6_h_158.py
+
+ap-northeast-2_3-38-111-49
+total 516
+-rw-r--r--. 1 ec2-user ec2-user      0 Jul 19 23:58 logfile
+-rw-r--r--. 1 root     root     139615 Jul 19 23:51 graphene_mol_r_6_6_h_188.out
+-rw-r--r--. 1 root     root     139617 Jul 19 23:44 graphene_mol_r_6_6_h_189.out
+-rw-r--r--. 1 root     root      13275 Jul 19 03:59 graphene_mol_r_6_6_h_110.out
+-rw-r--r--. 1 root     root      13276 Jul 19 01:08 graphene_mol_r_6_6_h_111.out
+-rw-r--r--. 1 ec2-user ec2-user    349 Jul 18 05:24 batch_run.py
+-rw-r--r--. 1 ec2-user ec2-user   5610 Jul 18 05:24 graphene_mol_r_6_6_h_111.py
+-rw-r--r--. 1 ec2-user ec2-user   5610 Jul 18 05:24 graphene_mol_r_6_6_h_110.py
+-rw-r--r--. 1 root     root      77419 Jul 18 02:46 graphene_mol_r_6_6_h_188.json
+-rw-r--r--. 1 root     root       3181 Jul 18 02:46 graphene_mol_r_6_6_h_188.xyz
+-rw-r--r--. 1 root     root       3168 Jul 18 02:20 graphene_mol_r_6_6_h_189.xyz
+-rw-r--r--. 1 root     root      77441 Jul 18 02:20 graphene_mol_r_6_6_h_189.json
+-rw-r--r--. 1 ec2-user ec2-user   5619 Jul 16 07:55 graphene_mol_r_6_6_h_189.py
+-rw-r--r--. 1 ec2-user ec2-user   5619 Jul 16 07:55 graphene_mol_r_6_6_h_188.py
+drwxr-xr-x. 5 root     root         74 Jul 16 07:51 Graphene_venv
+
+eu-central-1_3-74-231-142
+total 340
+-rw-r--r--. 1 ec2-user ec2-user      0 Jul 19 23:59 logfile
+-rw-r--r--. 1 root     root     139620 Jul 19 23:50 graphene_mol_r_6_6_h_79.out
+-rw-r--r--. 1 root     root     126385 Jul 19 22:23 graphene_mol_r_6_6_h_78.out
+-rw-r--r--. 1 root     root      13276 Jul 19 22:12 graphene_mol_r_6_6_h_165.out
+-rw-r--r--. 1 root     root      13276 Jul 19 13:31 graphene_mol_r_6_6_h_164.out
+-rw-r--r--. 1 ec2-user ec2-user    349 Jul 18 08:56 batch_run.py
+-rw-r--r--. 1 ec2-user ec2-user   5605 Jul 18 08:56 graphene_mol_r_6_6_h_79.py
+-rw-r--r--. 1 ec2-user ec2-user   5605 Jul 18 08:56 graphene_mol_r_6_6_h_78.py
+drwxr-xr-x. 5 root     root         74 Jul 16 08:02 Graphene_venv
+-rw-r--r--. 1 ec2-user ec2-user   5616 Jul 16 08:01 graphene_mol_r_6_6_h_165.py
+-rw-r--r--. 1 ec2-user ec2-user   5616 Jul 16 08:01 graphene_mol_r_6_6_h_164.py
+
+eu-west-2_35-176-15-24
+total 100
+-rw-r--r--. 1 ec2-user ec2-user     0 Jul 19 23:57 logfile
+-rw-r--r--. 1 root     root     13276 Jul 19 07:19 graphene_mol_r_6_6_h_204.out
+-rw-r--r--. 1 root     root     13275 Jul 19 06:41 graphene_mol_r_6_6_h_205.out
+-rw-r--r--. 1 root     root     13275 Jul 19 01:57 graphene_mol_r_6_6_h_46.out
+-rw-r--r--. 1 root     root     13276 Jul 18 23:38 graphene_mol_r_6_6_h_47.out
+-rw-r--r--. 1 ec2-user ec2-user   349 Jul 18 08:55 batch_run.py
+-rw-r--r--. 1 ec2-user ec2-user  5602 Jul 18 08:55 graphene_mol_r_6_6_h_47.py
+-rw-r--r--. 1 ec2-user ec2-user  5602 Jul 18 08:55 graphene_mol_r_6_6_h_46.py
+-rw-r--r--. 1 ec2-user ec2-user  5622 Jul 16 06:17 graphene_mol_r_6_6_h_205.py
+-rw-r--r--. 1 ec2-user ec2-user  5622 Jul 16 06:17 graphene_mol_r_6_6_h_204.py
+drwxr-xr-x. 5 root     root        74 Jul 16 03:55 Graphene_venv
+
+us-west-1_52-53-191-246
+total 588
+-rw-r--r--. 1 ec2-user ec2-user     0 Jul 19 23:49 logfile
+-rw-r--r--. 1 root     root     73461 Jul 19 21:25 graphene_mol_r_6_6_h_234.out
+-rw-r--r--. 1 root     root     13275 Jul 19 21:23 graphene_mol_r_6_6_h_120.out
+-rw-r--r--. 1 root     root     73465 Jul 19 21:08 graphene_mol_r_6_6_h_235.out
+-rw-r--r--. 1 root     root     73464 Jul 19 20:38 graphene_mol_r_6_6_h_133.out
+-rw-r--r--. 1 root     root     73466 Jul 19 20:26 graphene_mol_r_6_6_h_121.out
+-rw-r--r--. 1 root     root     73463 Jul 19 20:26 graphene_mol_r_6_6_h_132.out
+-rw-r--r--. 1 ec2-user ec2-user   349 Jul 18 05:23 batch_run.py
+-rw-r--r--. 1 ec2-user ec2-user  5613 Jul 18 05:23 graphene_mol_r_6_6_h_121.py
+-rw-r--r--. 1 ec2-user ec2-user  5610 Jul 18 05:23 graphene_mol_r_6_6_h_120.py
+-rw-r--r--. 1 ec2-user ec2-user  5613 Jul 18 05:17 graphene_mol_r_6_6_h_133.py
+-rw-r--r--. 1 ec2-user ec2-user  5613 Jul 18 05:17 graphene_mol_r_6_6_h_132.py
+-rw-r--r--. 1 root     root     77439 Jul 17 22:48 graphene_mol_r_6_6_h_234.json
+-rw-r--r--. 1 root     root      3171 Jul 17 22:48 graphene_mol_r_6_6_h_234.xyz
+-rw-r--r--. 1 root     root     77373 Jul 17 22:45 graphene_mol_r_6_6_h_235.json
+-rw-r--r--. 1 root     root      3197 Jul 17 22:45 graphene_mol_r_6_6_h_235.xyz
+-rw-r--r--. 1 ec2-user ec2-user  5624 Jul 16 07:35 graphene_mol_r_6_6_h_235.py
+-rw-r--r--. 1 ec2-user ec2-user  5625 Jul 16 07:35 graphene_mol_r_6_6_h_234.py
+drwxr-xr-x. 5 root     root        74 Jul 15 23:46 Graphene_venv
+
+ap-northeast-2_3-34-250-218
+total 356
+-rw-r--r--. 1 ec2-user ec2-user      0 Jul 19 23:58 logfile
+-rw-r--r--. 1 root     root     139621 Jul 19 23:44 graphene_mol_r_6_6_h_191.out
+-rw-r--r--. 1 root     root     139616 Jul 19 23:19 graphene_mol_r_6_6_h_190.out
+-rw-r--r--. 1 root     root      13275 Jul 19 18:02 graphene_mol_r_6_6_h_112.out
+-rw-r--r--. 1 root     root      13275 Jul 19 06:14 graphene_mol_r_6_6_h_113.out
+-rw-r--r--. 1 ec2-user ec2-user    349 Jul 18 05:24 batch_run.py
+-rw-r--r--. 1 ec2-user ec2-user   5610 Jul 18 05:24 graphene_mol_r_6_6_h_113.py
+-rw-r--r--. 1 ec2-user ec2-user   5610 Jul 18 05:24 graphene_mol_r_6_6_h_112.py
+-rw-r--r--. 1 ec2-user ec2-user   5619 Jul 16 07:55 graphene_mol_r_6_6_h_191.py
+-rw-r--r--. 1 ec2-user ec2-user   5618 Jul 16 07:55 graphene_mol_r_6_6_h_190.py
+drwxr-xr-x. 5 root     root         74 Jul 16 07:51 Graphene_venv
+
+eu-north-1_16-171-169-92
+total 912
+-rw-r--r--. 1 ec2-user ec2-user      0 Jul 19 23:57 logfile
+-rw-r--r--. 1 root     root      77404 Jul 19 16:19 graphene_mol_r_6_6_h_38.json
+-rw-r--r--. 1 root     root     357222 Jul 19 16:19 graphene_mol_r_6_6_h_38.out
+-rw-r--r--. 1 root     root       3167 Jul 19 16:19 graphene_mol_r_6_6_h_38.xyz
+-rw-r--r--. 1 root     root      13274 Jul 19 14:13 graphene_mol_r_6_6_h_209.out
+-rw-r--r--. 1 root     root      13274 Jul 19 13:54 graphene_mol_r_6_6_h_208.out
+-rw-r--r--. 1 root     root      77449 Jul 19 10:59 graphene_mol_r_6_6_h_39.json
+-rw-r--r--. 1 root     root     330756 Jul 19 10:59 graphene_mol_r_6_6_h_39.out
+-rw-r--r--. 1 root     root       3213 Jul 19 10:59 graphene_mol_r_6_6_h_39.xyz
+-rw-r--r--. 1 ec2-user ec2-user    349 Jul 18 08:53 batch_run.py
+-rw-r--r--. 1 ec2-user ec2-user   5599 Jul 18 08:53 graphene_mol_r_6_6_h_39.py
+-rw-r--r--. 1 ec2-user ec2-user   5599 Jul 18 08:53 graphene_mol_r_6_6_h_38.py
+-rw-r--r--. 1 ec2-user ec2-user   5620 Jul 16 07:38 graphene_mol_r_6_6_h_209.py
+-rw-r--r--. 1 ec2-user ec2-user   5622 Jul 16 07:38 graphene_mol_r_6_6_h_208.py
+drwxr-xr-x. 5 root     root         74 Jul 16 00:21 Graphene_venv
+
+eu-central-1_3-73-34-79
+total 340
+-rw-r--r--. 1 ec2-user ec2-user      0 Jul 20 00:00 logfile
+-rw-r--r--. 1 root     root     132349 Jul 19 23:28 graphene_mol_r_6_6_h_83.out
+-rw-r--r--. 1 root     root     132309 Jul 19 23:18 graphene_mol_r_6_6_h_82.out
+-rw-r--r--. 1 root     root      13275 Jul 19 20:09 graphene_mol_r_6_6_h_169.out
+-rw-r--r--. 1 root     root      13276 Jul 19 10:36 graphene_mol_r_6_6_h_168.out
+-rw-r--r--. 1 ec2-user ec2-user    349 Jul 18 08:57 batch_run.py
+-rw-r--r--. 1 ec2-user ec2-user   5605 Jul 18 08:57 graphene_mol_r_6_6_h_83.py
+-rw-r--r--. 1 ec2-user ec2-user   5605 Jul 18 08:57 graphene_mol_r_6_6_h_82.py
+drwxr-xr-x. 5 root     root         74 Jul 16 08:02 Graphene_venv
+-rw-r--r--. 1 ec2-user ec2-user   5616 Jul 16 08:02 graphene_mol_r_6_6_h_169.py
+-rw-r--r--. 1 ec2-user ec2-user   5616 Jul 16 08:02 graphene_mol_r_6_6_h_168.py
+
+ca-central-1_15-223-32-110
+total 620
+-rw-r--r--. 1 ec2-user ec2-user      0 Jul 19 23:56 logfile
+-rw-r--r--. 1 root     root     139618 Jul 19 23:43 graphene_mol_r_6_6_h_30.out
+-rw-r--r--. 1 root     root     330757 Jul 19 22:14 graphene_mol_r_6_6_h_31.out
+-rw-r--r--. 1 root     root       3178 Jul 19 22:14 graphene_mol_r_6_6_h_31.xyz
+-rw-r--r--. 1 root     root      77455 Jul 19 22:14 graphene_mol_r_6_6_h_31.json
+-rw-r--r--. 1 root     root      13253 Jul 19 21:57 graphene_mol_r_6_6_h_213.out
+-rw-r--r--. 1 root     root      13273 Jul 19 21:57 graphene_mol_r_6_6_h_212.out
+-rw-r--r--. 1 ec2-user ec2-user    349 Jul 18 08:53 batch_run.py
+-rw-r--r--. 1 ec2-user ec2-user   5599 Jul 18 08:53 graphene_mol_r_6_6_h_31.py
+-rw-r--r--. 1 ec2-user ec2-user   5599 Jul 18 08:53 graphene_mol_r_6_6_h_30.py
+-rw-r--r--. 1 ec2-user ec2-user   5622 Jul 16 07:37 graphene_mol_r_6_6_h_213.py
+-rw-r--r--. 1 ec2-user ec2-user   5621 Jul 16 07:37 graphene_mol_r_6_6_h_212.py
+drwxr-xr-x. 5 root     root         74 Jul 16 00:18 Graphene_venv
+
+ap-south-1_3-109-212-28
+total 608
+-rw-r--r--. 1 ec2-user ec2-user      0 Jul 19 23:56 logfile
+-rw-r--r--. 1 root     root      99928 Jul 19 23:40 graphene_mol_r_6_6_h_29.out
+-rw-r--r--. 1 root     root     113153 Jul 19 23:39 graphene_mol_r_6_6_h_28.out
+-rw-r--r--. 1 root     root      92648 Jul 19 22:47 graphene_mol_r_6_6_h_223.out
+-rw-r--r--. 1 root     root      92643 Jul 19 22:36 graphene_mol_r_6_6_h_222.out
+-rw-r--r--. 1 ec2-user ec2-user    349 Jul 18 08:52 batch_run.py
+-rw-r--r--. 1 ec2-user ec2-user   5599 Jul 18 08:52 graphene_mol_r_6_6_h_29.py
+-rw-r--r--. 1 ec2-user ec2-user   5599 Jul 18 08:52 graphene_mol_r_6_6_h_28.py
+-rw-r--r--. 1 root     root      77397 Jul 18 02:09 graphene_mol_r_6_6_h_223.json
+-rw-r--r--. 1 root     root       3214 Jul 18 02:09 graphene_mol_r_6_6_h_223.xyz
+-rw-r--r--. 1 root     root      77365 Jul 17 20:08 graphene_mol_r_6_6_h_222.json
+-rw-r--r--. 1 root     root       3218 Jul 17 20:08 graphene_mol_r_6_6_h_222.xyz
+-rw-r--r--. 1 ec2-user ec2-user   5625 Jul 16 07:36 graphene_mol_r_6_6_h_223.py
+-rw-r--r--. 1 ec2-user ec2-user   5625 Jul 16 07:36 graphene_mol_r_6_6_h_222.py
+drwxr-xr-x. 5 root     root         74 Jul 16 00:16 Graphene_venv
+
+us-east-1_3-91-50-207
+total 1812
+-rw-r--r--. 1 ec2-user ec2-user      0 Jul 19 23:49 logfile
+-rw-r--r--. 1 root     root      77441 Jul 19 16:38 graphene_mol_r_6_6_h_130.json
+-rw-r--r--. 1 root     root     396990 Jul 19 16:38 graphene_mol_r_6_6_h_130.out
+-rw-r--r--. 1 root     root       3203 Jul 19 16:38 graphene_mol_r_6_6_h_130.xyz
+-rw-r--r--. 1 root     root      77353 Jul 19 12:50 graphene_mol_r_6_6_h_245.json
+-rw-r--r--. 1 root     root     370458 Jul 19 12:50 graphene_mol_r_6_6_h_245.out
+-rw-r--r--. 1 root     root       3225 Jul 19 12:50 graphene_mol_r_6_6_h_245.xyz
+-rw-r--r--. 1 root     root     357220 Jul 19 10:56 graphene_mol_r_6_6_h_244.out
+-rw-r--r--. 1 root     root      77448 Jul 19 10:56 graphene_mol_r_6_6_h_244.json
+-rw-r--r--. 1 root     root       3223 Jul 19 10:56 graphene_mol_r_6_6_h_244.xyz
+-rw-r--r--. 1 root     root      77415 Jul 19 08:29 graphene_mol_r_6_6_h_131.json
+-rw-r--r--. 1 root     root     343983 Jul 19 08:29 graphene_mol_r_6_6_h_131.out
+-rw-r--r--. 1 root     root       3214 Jul 19 08:29 graphene_mol_r_6_6_h_131.xyz
+-rw-r--r--. 1 ec2-user ec2-user    349 Jul 17 20:33 batch_run.py
+-rw-r--r--. 1 ec2-user ec2-user   5613 Jul 17 20:33 graphene_mol_r_6_6_h_131.py
+-rw-r--r--. 1 ec2-user ec2-user   5613 Jul 17 20:33 graphene_mol_r_6_6_h_130.py
+-rw-r--r--. 1 ec2-user ec2-user   5625 Jul 16 07:34 graphene_mol_r_6_6_h_245.py
+-rw-r--r--. 1 ec2-user ec2-user   5625 Jul 16 07:34 graphene_mol_r_6_6_h_244.py
+drwxr-xr-x. 5 root     root         74 Jul 15 23:07 Graphene_venv
+
+us-east-2_3-19-65-87
+total 1764
+-rw-r--r--. 1 ec2-user ec2-user      0 Jul 19 23:49 logfile
+-rw-r--r--. 1 root     root      77398 Jul 19 06:54 graphene_mol_r_6_6_h_236.json
+-rw-r--r--. 1 root     root     357219 Jul 19 06:54 graphene_mol_r_6_6_h_236.out
+-rw-r--r--. 1 root     root       3173 Jul 19 06:54 graphene_mol_r_6_6_h_236.xyz
+-rw-r--r--. 1 root     root      77403 Jul 19 06:47 graphene_mol_r_6_6_h_237.json
+-rw-r--r--. 1 root     root     357212 Jul 19 06:47 graphene_mol_r_6_6_h_237.out
+-rw-r--r--. 1 root     root       3169 Jul 19 06:47 graphene_mol_r_6_6_h_237.xyz
+-rw-r--r--. 1 root     root      77380 Jul 19 04:52 graphene_mol_r_6_6_h_141.json
+-rw-r--r--. 1 root     root     370523 Jul 19 04:52 graphene_mol_r_6_6_h_141.out
+-rw-r--r--. 1 root     root       3199 Jul 19 04:52 graphene_mol_r_6_6_h_141.xyz
+-rw-r--r--. 1 root     root      77443 Jul 19 00:00 graphene_mol_r_6_6_h_140.json
+-rw-r--r--. 1 root     root     330754 Jul 19 00:00 graphene_mol_r_6_6_h_140.out
+-rw-r--r--. 1 root     root       3168 Jul 19 00:00 graphene_mol_r_6_6_h_140.xyz
+-rw-r--r--. 1 ec2-user ec2-user    349 Jul 17 18:24 batch_run.py
+-rw-r--r--. 1 ec2-user ec2-user   5613 Jul 17 18:24 graphene_mol_r_6_6_h_141.py
+-rw-r--r--. 1 ec2-user ec2-user   5613 Jul 17 18:24 graphene_mol_r_6_6_h_140.py
+-rw-r--r--. 1 ec2-user ec2-user   5624 Jul 16 07:35 graphene_mol_r_6_6_h_237.py
+-rw-r--r--. 1 ec2-user ec2-user   5624 Jul 16 07:35 graphene_mol_r_6_6_h_236.py
+drwxr-xr-x. 5 root     root         74 Jul 15 23:20 Graphene_venv
+
+ca-central-1_15-156-88-33
+total 608
+-rw-r--r--. 1 ec2-user ec2-user      0 Jul 19 23:56 logfile
+-rw-r--r--. 1 root     root     139620 Jul 19 23:32 graphene_mol_r_6_6_h_32.out
+-rw-r--r--. 1 root     root      77474 Jul 19 22:13 graphene_mol_r_6_6_h_33.json
+-rw-r--r--. 1 root     root     330757 Jul 19 22:13 graphene_mol_r_6_6_h_33.out
+-rw-r--r--. 1 root     root       3209 Jul 19 22:13 graphene_mol_r_6_6_h_33.xyz
+-rw-r--r--. 1 root     root       7337 Jul 19 20:50 graphene_mol_r_6_6_h_215.out
+-rw-r--r--. 1 root     root      13276 Jul 19 13:50 graphene_mol_r_6_6_h_214.out
+-rw-r--r--. 1 ec2-user ec2-user    349 Jul 18 08:53 batch_run.py
+-rw-r--r--. 1 ec2-user ec2-user   5599 Jul 18 08:53 graphene_mol_r_6_6_h_33.py
+-rw-r--r--. 1 ec2-user ec2-user   5599 Jul 18 08:53 graphene_mol_r_6_6_h_32.py
+-rw-r--r--. 1 ec2-user ec2-user   5622 Jul 16 07:37 graphene_mol_r_6_6_h_215.py
+-rw-r--r--. 1 ec2-user ec2-user   5621 Jul 16 07:37 graphene_mol_r_6_6_h_214.py
+drwxr-xr-x. 5 root     root         74 Jul 16 00:18 Graphene_venv
+
+eu-west-2_18-132-17-154
+total 324
+-rw-r--r--. 1 ec2-user ec2-user      0 Jul 19 23:57 logfile
+-rw-r--r--. 1 root     root     132344 Jul 19 23:32 graphene_mol_r_6_6_h_45.out
+-rw-r--r--. 1 root     root     126389 Jul 19 21:35 graphene_mol_r_6_6_h_44.out
+-rw-r--r--. 1 root     root       7337 Jul 19 19:23 graphene_mol_r_6_6_h_202.out
+-rw-r--r--. 1 root     root      13275 Jul 19 08:36 graphene_mol_r_6_6_h_203.out
+-rw-r--r--. 1 ec2-user ec2-user    349 Jul 18 08:55 batch_run.py
+-rw-r--r--. 1 ec2-user ec2-user   5599 Jul 18 08:55 graphene_mol_r_6_6_h_45.py
+-rw-r--r--. 1 ec2-user ec2-user   5599 Jul 18 08:55 graphene_mol_r_6_6_h_44.py
+-rw-r--r--. 1 ec2-user ec2-user   5622 Jul 16 06:17 graphene_mol_r_6_6_h_203.py
+-rw-r--r--. 1 ec2-user ec2-user   5622 Jul 16 06:17 graphene_mol_r_6_6_h_202.py
+drwxr-xr-x. 2 root     root          6 Jul 16 05:04 test_ss13
+drwxr-xr-x. 2 root     root          6 Jul 16 04:55 test_ss12
+drwxr-xr-x. 2 root     root          6 Jul 16 04:54 test_ss11
+drwxr-xr-x. 2 root     root          6 Jul 16 04:54 test_ss10
+drwxr-xr-x. 2 root     root          6 Jul 16 04:54 test_ss9
+drwxr-xr-x. 2 root     root          6 Jul 16 04:53 test_ss8
+drwxr-xr-x. 2 root     root          6 Jul 16 04:53 test_ss7
+drwxr-xr-x. 2 root     root          6 Jul 16 04:52 test_ss6
+drwxr-xr-x. 2 root     root          6 Jul 16 04:50 test_ss5
+drwxr-xr-x. 2 root     root          6 Jul 16 04:41 test_ss4
+drwxr-xr-x. 2 root     root          6 Jul 16 04:40 test_ss3
+drwxr-xr-x. 5 root     root         74 Jul 16 03:55 Graphene_venv
+
+us-east-2_18-191-201-0
+total 1792
+-rw-r--r--. 1 ec2-user ec2-user      0 Jul 19 23:49 logfile
+-rw-r--r--. 1 root     root      77389 Jul 19 10:52 graphene_mol_r_6_6_h_239.json
+-rw-r--r--. 1 root     root     357211 Jul 19 10:52 graphene_mol_r_6_6_h_239.out
+-rw-r--r--. 1 root     root       3185 Jul 19 10:52 graphene_mol_r_6_6_h_239.xyz
+-rw-r--r--. 1 root     root      77385 Jul 19 10:33 graphene_mol_r_6_6_h_238.json
+-rw-r--r--. 1 root     root     357219 Jul 19 10:33 graphene_mol_r_6_6_h_238.out
+-rw-r--r--. 1 root     root       3193 Jul 19 10:33 graphene_mol_r_6_6_h_238.xyz
+-rw-r--r--. 1 root     root      77398 Jul 19 08:45 graphene_mol_r_6_6_h_143.json
+-rw-r--r--. 1 root     root     357221 Jul 19 08:45 graphene_mol_r_6_6_h_143.out
+-rw-r--r--. 1 root     root       3184 Jul 19 08:45 graphene_mol_r_6_6_h_143.xyz
+-rw-r--r--. 1 root     root      77451 Jul 19 08:12 graphene_mol_r_6_6_h_142.json
+-rw-r--r--. 1 root     root     370455 Jul 19 08:12 graphene_mol_r_6_6_h_142.out
+-rw-r--r--. 1 root     root       3200 Jul 19 08:12 graphene_mol_r_6_6_h_142.xyz
+-rw-r--r--. 1 ec2-user ec2-user    349 Jul 17 18:24 batch_run.py
+-rw-r--r--. 1 ec2-user ec2-user   5613 Jul 17 18:24 graphene_mol_r_6_6_h_143.py
+-rw-r--r--. 1 ec2-user ec2-user   5613 Jul 17 18:24 graphene_mol_r_6_6_h_142.py
+-rw-r--r--. 1 ec2-user ec2-user   5624 Jul 16 07:35 graphene_mol_r_6_6_h_239.py
+-rw-r--r--. 1 ec2-user ec2-user   5625 Jul 16 07:35 graphene_mol_r_6_6_h_238.py
+drwxr-xr-x. 5 root     root         74 Jul 15 23:20 Graphene_venv
+
+eu-west-1_34-241-210-171
+total 340
+-rw-r--r--. 1 ec2-user ec2-user      0 Jul 20 00:00 logfile
+-rw-r--r--. 1 root     root     132346 Jul 19 23:49 graphene_mol_r_6_6_h_86.out
+-rw-r--r--. 1 root     root     132344 Jul 19 23:41 graphene_mol_r_6_6_h_87.out
+-rw-r--r--. 1 root     root      13275 Jul 19 05:30 graphene_mol_r_6_6_h_160.out
+-rw-r--r--. 1 root     root      13275 Jul 19 04:38 graphene_mol_r_6_6_h_161.out
+-rw-r--r--. 1 ec2-user ec2-user    349 Jul 18 08:57 batch_run.py
+-rw-r--r--. 1 ec2-user ec2-user   5605 Jul 18 08:57 graphene_mol_r_6_6_h_87.py
+-rw-r--r--. 1 ec2-user ec2-user   5605 Jul 18 08:57 graphene_mol_r_6_6_h_86.py
+drwxr-xr-x. 5 root     root         74 Jul 16 08:04 Graphene_venv
+-rw-r--r--. 1 ec2-user ec2-user   5616 Jul 16 08:04 graphene_mol_r_6_6_h_161.py
+-rw-r--r--. 1 ec2-user ec2-user   5616 Jul 16 08:04 graphene_mol_r_6_6_h_160.py
+
+eu-north-1_51-20-188-19
+total 916
+-rw-r--r--. 1 ec2-user ec2-user      0 Jul 19 23:57 logfile
+-rw-r--r--. 1 root     root      33781 Jul 19 21:53 graphene_mol_r_6_6_h_211.out
+-rw-r--r--. 1 root     root      77398 Jul 19 15:03 graphene_mol_r_6_6_h_41.json
+-rw-r--r--. 1 root     root     343990 Jul 19 15:03 graphene_mol_r_6_6_h_41.out
+-rw-r--r--. 1 root     root       3217 Jul 19 15:03 graphene_mol_r_6_6_h_41.xyz
+-rw-r--r--. 1 root     root      13253 Jul 19 14:56 graphene_mol_r_6_6_h_210.out
+-rw-r--r--. 1 root     root      77407 Jul 19 12:49 graphene_mol_r_6_6_h_40.json
+-rw-r--r--. 1 root     root     330825 Jul 19 12:49 graphene_mol_r_6_6_h_40.out
+-rw-r--r--. 1 root     root       3167 Jul 19 12:49 graphene_mol_r_6_6_h_40.xyz
+-rw-r--r--. 1 ec2-user ec2-user    349 Jul 18 08:54 batch_run.py
+-rw-r--r--. 1 ec2-user ec2-user   5599 Jul 18 08:54 graphene_mol_r_6_6_h_41.py
+-rw-r--r--. 1 ec2-user ec2-user   5599 Jul 18 08:53 graphene_mol_r_6_6_h_40.py
+-rw-r--r--. 1 ec2-user ec2-user   5622 Jul 16 07:38 graphene_mol_r_6_6_h_211.py
+-rw-r--r--. 1 ec2-user ec2-user   5622 Jul 16 07:38 graphene_mol_r_6_6_h_210.py
+drwxr-xr-x. 5 root     root         74 Jul 16 00:21 Graphene_venv
+
+sa-east-1_15-228-186-137
+total 100
+-rw-r--r--. 1 ec2-user ec2-user     0 Jul 20 00:01 logfile
+-rw-r--r--. 1 root     root     13275 Jul 19 23:55 graphene_mol_r_6_6_h_103.out
+-rw-r--r--. 1 root     root     13276 Jul 19 15:29 graphene_mol_r_6_6_h_146.out
+-rw-r--r--. 1 root     root     13275 Jul 19 10:26 graphene_mol_r_6_6_h_147.out
+-rw-r--r--. 1 root     root     13275 Jul 19 09:24 graphene_mol_r_6_6_h_102.out
+-rw-r--r--. 1 ec2-user ec2-user   349 Jul 18 16:14 batch_run.py
+-rw-r--r--. 1 ec2-user ec2-user  5610 Jul 18 16:14 graphene_mol_r_6_6_h_103.py
+-rw-r--r--. 1 ec2-user ec2-user  5610 Jul 18 16:14 graphene_mol_r_6_6_h_102.py
+-rw-r--r--. 1 ec2-user ec2-user  5616 Jul 16 09:02 graphene_mol_r_6_6_h_147.py
+-rw-r--r--. 1 ec2-user ec2-user  5616 Jul 16 09:02 graphene_mol_r_6_6_h_146.py
+drwxr-xr-x. 5 root     root        74 Jul 16 08:10 Graphene_venv
+
+us-west-2_18-246-233-236
+total 1828
+-rw-r--r--. 1 ec2-user ec2-user      0 Jul 19 23:49 logfile
+-rw-r--r--. 1 root     root      77376 Jul 19 16:37 graphene_mol_r_6_6_h_226.json
+-rw-r--r--. 1 root     root     383676 Jul 19 16:37 graphene_mol_r_6_6_h_226.out
+-rw-r--r--. 1 root     root       3178 Jul 19 16:37 graphene_mol_r_6_6_h_226.xyz
+-rw-r--r--. 1 root     root     370448 Jul 19 14:45 graphene_mol_r_6_6_h_227.out
+-rw-r--r--. 1 root     root       3206 Jul 19 14:45 graphene_mol_r_6_6_h_227.xyz
+-rw-r--r--. 1 root     root      77398 Jul 19 14:45 graphene_mol_r_6_6_h_227.json
+-rw-r--r--. 1 root     root      77457 Jul 19 12:23 graphene_mol_r_6_6_h_137.json
+-rw-r--r--. 1 root     root     357220 Jul 19 12:23 graphene_mol_r_6_6_h_137.out
+-rw-r--r--. 1 root     root       3171 Jul 19 12:23 graphene_mol_r_6_6_h_137.xyz
+-rw-r--r--. 1 root     root      77403 Jul 19 11:44 graphene_mol_r_6_6_h_136.json
+-rw-r--r--. 1 root     root     370451 Jul 19 11:44 graphene_mol_r_6_6_h_136.out
+-rw-r--r--. 1 root     root       3203 Jul 19 11:44 graphene_mol_r_6_6_h_136.xyz
+-rw-r--r--. 1 ec2-user ec2-user    349 Jul 17 18:26 batch_run.py
+-rw-r--r--. 1 ec2-user ec2-user   5613 Jul 17 18:26 graphene_mol_r_6_6_h_137.py
+-rw-r--r--. 1 ec2-user ec2-user   5612 Jul 17 18:26 graphene_mol_r_6_6_h_136.py
+-rw-r--r--. 1 ec2-user ec2-user   5624 Jul 16 07:35 graphene_mol_r_6_6_h_227.py
+-rw-r--r--. 1 ec2-user ec2-user   5624 Jul 16 07:35 graphene_mol_r_6_6_h_226.py
+drwxr-xr-x. 5 root     root         74 Jul 15 23:49 Graphene_venv
+
+ap-northeast-2_3-38-44-25
+total 568
+-rw-r--r--. 1 ec2-user ec2-user      0 Jul 19 23:58 logfile
+-rw-r--r--. 1 root     root     139618 Jul 19 23:58 graphene_mol_r_6_6_h_192.out
+-rw-r--r--. 1 root     root     139620 Jul 19 23:52 graphene_mol_r_6_6_h_193.out
+-rw-r--r--. 1 root     root      13275 Jul 19 07:31 graphene_mol_r_6_6_h_115.out
+-rw-r--r--. 1 root     root      13276 Jul 19 03:55 graphene_mol_r_6_6_h_114.out
+-rw-r--r--. 1 ec2-user ec2-user    349 Jul 18 05:24 batch_run.py
+-rw-r--r--. 1 ec2-user ec2-user   5610 Jul 18 05:24 graphene_mol_r_6_6_h_115.py
+-rw-r--r--. 1 ec2-user ec2-user   5610 Jul 18 05:24 graphene_mol_r_6_6_h_114.py
+-rw-r--r--. 1 root     root      77430 Jul 18 00:04 graphene_mol_r_6_6_h_193.json
+-rw-r--r--. 1 root     root       3169 Jul 18 00:04 graphene_mol_r_6_6_h_193.xyz
+-rw-r--r--. 1 root     root      77365 Jul 17 21:23 graphene_mol_r_6_6_h_192.json
+-rw-r--r--. 1 root     root       3211 Jul 17 21:23 graphene_mol_r_6_6_h_192.xyz
+-rw-r--r--. 1 ec2-user ec2-user   5618 Jul 16 07:55 graphene_mol_r_6_6_h_193.py
+-rw-r--r--. 1 ec2-user ec2-user   5619 Jul 16 07:55 graphene_mol_r_6_6_h_192.py
+drwxr-xr-x. 5 root     root         74 Jul 16 07:51 Graphene_venv
+
+eu-west-3_13-38-229-180
+total 100
+-rw-r--r--. 1 ec2-user ec2-user     0 Jul 20 00:00 logfile
+-rw-r--r--. 1 root     root     13276 Jul 19 06:12 graphene_mol_r_6_6_h_155.out
+-rw-r--r--. 1 root     root     13276 Jul 19 05:20 graphene_mol_r_6_6_h_154.out
+-rw-r--r--. 1 root     root     13276 Jul 19 03:27 graphene_mol_r_6_6_h_99.out
+-rw-r--r--. 1 root     root     13276 Jul 19 01:29 graphene_mol_r_6_6_h_98.out
+-rw-r--r--. 1 ec2-user ec2-user   349 Jul 18 08:58 batch_run.py
+-rw-r--r--. 1 ec2-user ec2-user  5608 Jul 18 08:58 graphene_mol_r_6_6_h_99.py
+-rw-r--r--. 1 ec2-user ec2-user  5608 Jul 18 08:58 graphene_mol_r_6_6_h_98.py
+drwxr-xr-x. 5 root     root        74 Jul 16 08:05 Graphene_venv
+-rw-r--r--. 1 ec2-user ec2-user  5616 Jul 16 08:05 graphene_mol_r_6_6_h_155.py
+-rw-r--r--. 1 ec2-user ec2-user  5616 Jul 16 08:05 graphene_mol_r_6_6_h_154.py
+
+ap-southeast-2_3-106-60-201
+total 516
+-rw-r--r--. 1 ec2-user ec2-user      0 Jul 19 23:59 logfile
+-rw-r--r--. 1 root     root     139623 Jul 19 22:24 graphene_mol_r_6_6_h_178.out
+-rw-r--r--. 1 root     root     139614 Jul 19 22:20 graphene_mol_r_6_6_h_179.out
+-rw-r--r--. 1 root     root      13276 Jul 19 16:52 graphene_mol_r_6_6_h_100.out
+-rw-r--r--. 1 root     root      13274 Jul 19 03:59 graphene_mol_r_6_6_h_101.out
+-rw-r--r--. 1 ec2-user ec2-user    349 Jul 18 05:25 batch_run.py
+-rw-r--r--. 1 ec2-user ec2-user   5610 Jul 18 05:25 graphene_mol_r_6_6_h_101.py
+-rw-r--r--. 1 ec2-user ec2-user   5610 Jul 18 05:25 graphene_mol_r_6_6_h_100.py
+-rw-r--r--. 1 root     root      77440 Jul 17 20:14 graphene_mol_r_6_6_h_179.json
+-rw-r--r--. 1 root     root       3225 Jul 17 20:14 graphene_mol_r_6_6_h_179.xyz
+-rw-r--r--. 1 root     root       3182 Jul 17 20:11 graphene_mol_r_6_6_h_178.xyz
+-rw-r--r--. 1 root     root      77443 Jul 17 20:11 graphene_mol_r_6_6_h_178.json
+drwxr-xr-x. 5 root     root         74 Jul 16 07:59 Graphene_venv
+-rw-r--r--. 1 ec2-user ec2-user   5619 Jul 16 07:59 graphene_mol_r_6_6_h_179.py
+-rw-r--r--. 1 ec2-user ec2-user   5619 Jul 16 07:59 graphene_mol_r_6_6_h_178.py
+
+ap-southeast-2_13-239-32-57
+total 520
+-rw-r--r--. 1 ec2-user ec2-user      0 Jul 19 23:59 logfile
+-rw-r--r--. 1 root     root     145544 Jul 19 23:38 graphene_mol_r_6_6_h_181.out
+-rw-r--r--. 1 root     root     139613 Jul 19 21:53 graphene_mol_r_6_6_h_180.out
+-rw-r--r--. 1 root     root      13275 Jul 19 06:02 graphene_mol_r_6_6_h_103.out
+-rw-r--r--. 1 root     root      13276 Jul 19 01:06 graphene_mol_r_6_6_h_102.out
+-rw-r--r--. 1 ec2-user ec2-user    349 Jul 18 05:26 batch_run.py
+-rw-r--r--. 1 ec2-user ec2-user   5610 Jul 18 05:26 graphene_mol_r_6_6_h_103.py
+-rw-r--r--. 1 ec2-user ec2-user   5610 Jul 18 05:26 graphene_mol_r_6_6_h_102.py
+-rw-r--r--. 1 root     root      77360 Jul 17 20:30 graphene_mol_r_6_6_h_180.json
+-rw-r--r--. 1 root     root       3235 Jul 17 20:30 graphene_mol_r_6_6_h_180.xyz
+-rw-r--r--. 1 root     root      77338 Jul 17 20:26 graphene_mol_r_6_6_h_181.json
+-rw-r--r--. 1 root     root       3191 Jul 17 20:26 graphene_mol_r_6_6_h_181.xyz
+drwxr-xr-x. 5 root     root         74 Jul 16 07:59 Graphene_venv
+-rw-r--r--. 1 ec2-user ec2-user   5619 Jul 16 07:59 graphene_mol_r_6_6_h_181.py
+-rw-r--r--. 1 ec2-user ec2-user   5619 Jul 16 07:59 graphene_mol_r_6_6_h_180.py
+
+us-east-2_3-15-184-18
+total 1384
+-rw-r--r--. 1 ec2-user ec2-user      0 Jul 19 23:49 logfile
+-rw-r--r--. 1 root     root      77346 Jul 19 06:08 graphene_mol_r_6_6_h_144.json
+-rw-r--r--. 1 root     root     370453 Jul 19 06:08 graphene_mol_r_6_6_h_144.out
+-rw-r--r--. 1 root     root       3164 Jul 19 06:08 graphene_mol_r_6_6_h_144.xyz
+-rw-r--r--. 1 root     root      77378 Jul 19 03:48 graphene_mol_r_6_6_h_240.json
+-rw-r--r--. 1 root     root     357208 Jul 19 03:48 graphene_mol_r_6_6_h_240.out
+-rw-r--r--. 1 root     root       3211 Jul 19 03:48 graphene_mol_r_6_6_h_240.xyz
+-rw-r--r--. 1 root     root      77373 Jul 19 02:18 graphene_mol_r_6_6_h_145.json
+-rw-r--r--. 1 root     root     370452 Jul 19 02:18 graphene_mol_r_6_6_h_145.out
+-rw-r--r--. 1 root     root       3222 Jul 19 02:18 graphene_mol_r_6_6_h_145.xyz
+-rw-r--r--. 1 root     root      13253 Jul 18 00:40 graphene_mol_r_6_6_h_241.out
+-rw-r--r--. 1 ec2-user ec2-user    349 Jul 17 18:24 batch_run.py
+-rw-r--r--. 1 ec2-user ec2-user   5613 Jul 17 18:24 graphene_mol_r_6_6_h_145.py
+-rw-r--r--. 1 ec2-user ec2-user   5613 Jul 17 18:24 graphene_mol_r_6_6_h_144.py
+-rw-r--r--. 1 ec2-user ec2-user   5625 Jul 16 07:35 graphene_mol_r_6_6_h_241.py
+-rw-r--r--. 1 ec2-user ec2-user   5624 Jul 16 07:35 graphene_mol_r_6_6_h_240.py
+drwxr-xr-x. 5 root     root         74 Jul 15 23:20 Graphene_venv
+
+us-west-1_184-169-236-173
+total 600
+-rw-r--r--. 1 ec2-user ec2-user     0 Jul 19 23:49 logfile
+-rw-r--r--. 1 root     root     86692 Jul 19 22:21 graphene_mol_r_6_6_h_231.out
+-rw-r--r--. 1 root     root     86693 Jul 19 22:17 graphene_mol_r_6_6_h_230.out
+-rw-r--r--. 1 root     root     86697 Jul 19 22:07 graphene_mol_r_6_6_h_129.out
+-rw-r--r--. 1 root     root     86694 Jul 19 21:54 graphene_mol_r_6_6_h_128.out
+-rw-r--r--. 1 root     root     13276 Jul 19 17:03 graphene_mol_r_6_6_h_116.out
+-rw-r--r--. 1 root     root        49 Jul 18 05:23 graphene_mol_r_6_6_h_117.out
+-rw-r--r--. 1 ec2-user ec2-user   349 Jul 18 05:23 batch_run.py
+-rw-r--r--. 1 ec2-user ec2-user  5610 Jul 18 05:22 graphene_mol_r_6_6_h_117.py
+-rw-r--r--. 1 ec2-user ec2-user  5610 Jul 18 05:22 graphene_mol_r_6_6_h_116.py
+-rw-r--r--. 1 ec2-user ec2-user  5613 Jul 18 05:17 graphene_mol_r_6_6_h_129.py
+-rw-r--r--. 1 ec2-user ec2-user  5613 Jul 18 05:17 graphene_mol_r_6_6_h_128.py
+-rw-r--r--. 1 root     root     77361 Jul 17 23:16 graphene_mol_r_6_6_h_231.json
+-rw-r--r--. 1 root     root      3155 Jul 17 23:16 graphene_mol_r_6_6_h_231.xyz
+-rw-r--r--. 1 root     root     77438 Jul 17 18:51 graphene_mol_r_6_6_h_230.json
+-rw-r--r--. 1 root     root      3182 Jul 17 18:51 graphene_mol_r_6_6_h_230.xyz
+-rw-r--r--. 1 ec2-user ec2-user  5624 Jul 16 07:35 graphene_mol_r_6_6_h_231.py
+-rw-r--r--. 1 ec2-user ec2-user  5625 Jul 16 07:35 graphene_mol_r_6_6_h_230.py
+drwxr-xr-x. 5 root     root        74 Jul 15 23:46 Graphene_venv
+
+ap-southeast-1_18-143-171-214
+total 408
+-rw-r--r--. 1 ec2-user ec2-user      0 Jul 19 23:59 logfile
+-rw-r--r--. 1 root     root     145544 Jul 19 23:56 graphene_mol_r_6_6_h_72.out
+-rw-r--r--. 1 root     root     139619 Jul 19 21:54 graphene_mol_r_6_6_h_73.out
+-rw-r--r--. 1 root     root      13276 Jul 19 03:24 graphene_mol_r_6_6_h_170.out
+-rw-r--r--. 1 root     root      13253 Jul 18 16:50 graphene_mol_r_6_6_h_171.out
+-rw-r--r--. 1 ec2-user ec2-user    349 Jul 18 08:56 batch_run.py
+-rw-r--r--. 1 ec2-user ec2-user   5605 Jul 18 08:56 graphene_mol_r_6_6_h_73.py
+-rw-r--r--. 1 ec2-user ec2-user   5605 Jul 18 08:56 graphene_mol_r_6_6_h_72.py
+drwxr-xr-x. 5 root     root         74 Jul 16 08:00 Graphene_venv
+-rw-r--r--. 1 ec2-user ec2-user   5619 Jul 16 08:00 graphene_mol_r_6_6_h_171.py
+-rw-r--r--. 1 ec2-user ec2-user   5616 Jul 16 08:00 graphene_mol_r_6_6_h_170.py
+
+us-west-1_13-56-163-245
+total 600
+-rw-r--r--. 1 ec2-user ec2-user     0 Jul 19 23:49 logfile
+-rw-r--r--. 1 root     root     13276 Jul 19 23:37 graphene_mol_r_6_6_h_118.out
+-rw-r--r--. 1 root     root     86695 Jul 19 23:21 graphene_mol_r_6_6_h_232.out
+-rw-r--r--. 1 root     root     86691 Jul 19 23:13 graphene_mol_r_6_6_h_233.out
+-rw-r--r--. 1 root     root     86690 Jul 19 22:26 graphene_mol_r_6_6_h_131.out
+-rw-r--r--. 1 root     root     86691 Jul 19 21:50 graphene_mol_r_6_6_h_130.out
+-rw-r--r--. 1 root     root        50 Jul 18 05:23 graphene_mol_r_6_6_h_119.out
+-rw-r--r--. 1 ec2-user ec2-user   349 Jul 18 05:23 batch_run.py
+-rw-r--r--. 1 ec2-user ec2-user  5610 Jul 18 05:23 graphene_mol_r_6_6_h_119.py
+-rw-r--r--. 1 ec2-user ec2-user  5610 Jul 18 05:23 graphene_mol_r_6_6_h_118.py
+-rw-r--r--. 1 ec2-user ec2-user  5613 Jul 18 05:17 graphene_mol_r_6_6_h_131.py
+-rw-r--r--. 1 ec2-user ec2-user  5613 Jul 18 05:17 graphene_mol_r_6_6_h_130.py
+-rw-r--r--. 1 root     root     77439 Jul 18 00:22 graphene_mol_r_6_6_h_232.json
+-rw-r--r--. 1 root     root      3188 Jul 18 00:22 graphene_mol_r_6_6_h_232.xyz
+-rw-r--r--. 1 root     root     77405 Jul 17 23:35 graphene_mol_r_6_6_h_233.json
+-rw-r--r--. 1 root     root      3214 Jul 17 23:35 graphene_mol_r_6_6_h_233.xyz
+-rw-r--r--. 1 ec2-user ec2-user  5625 Jul 16 07:35 graphene_mol_r_6_6_h_233.py
+-rw-r--r--. 1 ec2-user ec2-user  5624 Jul 16 07:35 graphene_mol_r_6_6_h_232.py
+drwxr-xr-x. 5 root     root        74 Jul 15 23:46 Graphene_venv
+
+ca-central-1_3-97-113-190
+total 312
+-rw-r--r--. 1 ec2-user ec2-user      0 Jul 19 23:56 logfile
+-rw-r--r--. 1 root     root     119110 Jul 19 23:20 graphene_mol_r_6_6_h_34.out
+-rw-r--r--. 1 root     root     119110 Jul 19 23:13 graphene_mol_r_6_6_h_35.out
+-rw-r--r--. 1 root     root      13275 Jul 19 18:07 graphene_mol_r_6_6_h_216.out
+-rw-r--r--. 1 root     root      13276 Jul 19 15:17 graphene_mol_r_6_6_h_217.out
+-rw-r--r--. 1 ec2-user ec2-user    349 Jul 18 08:53 batch_run.py
+-rw-r--r--. 1 ec2-user ec2-user   5599 Jul 18 08:53 graphene_mol_r_6_6_h_35.py
+-rw-r--r--. 1 ec2-user ec2-user   5599 Jul 18 08:53 graphene_mol_r_6_6_h_34.py
+-rw-r--r--. 1 ec2-user ec2-user   5622 Jul 16 07:37 graphene_mol_r_6_6_h_217.py
+-rw-r--r--. 1 ec2-user ec2-user   5622 Jul 16 07:37 graphene_mol_r_6_6_h_216.py
+drwxr-xr-x. 5 root     root         74 Jul 16 00:18 Graphene_venv
+
+ap-southeast-1_13-212-45-96
+total 616
+-rw-r--r--. 1 ec2-user ec2-user      0 Jul 19 23:59 logfile
+-rw-r--r--. 1 root     root     105881 Jul 19 23:38 graphene_mol_r_6_6_h_75.out
+-rw-r--r--. 1 root     root      99925 Jul 19 22:12 graphene_mol_r_6_6_h_172.out
+-rw-r--r--. 1 root     root      99926 Jul 19 22:00 graphene_mol_r_6_6_h_173.out
+-rw-r--r--. 1 root     root      99927 Jul 19 21:41 graphene_mol_r_6_6_h_74.out
+-rw-r--r--. 1 ec2-user ec2-user    349 Jul 18 08:56 batch_run.py
+-rw-r--r--. 1 ec2-user ec2-user   5605 Jul 18 08:56 graphene_mol_r_6_6_h_75.py
+-rw-r--r--. 1 ec2-user ec2-user   5605 Jul 18 08:56 graphene_mol_r_6_6_h_74.py
+-rw-r--r--. 1 root     root      77468 Jul 18 07:16 graphene_mol_r_6_6_h_172.json
+-rw-r--r--. 1 root     root       3200 Jul 18 07:16 graphene_mol_r_6_6_h_172.xyz
+-rw-r--r--. 1 root     root       3212 Jul 17 21:58 graphene_mol_r_6_6_h_173.xyz
+-rw-r--r--. 1 root     root      77416 Jul 17 21:58 graphene_mol_r_6_6_h_173.json
+drwxr-xr-x. 5 root     root         74 Jul 16 08:00 Graphene_venv
+-rw-r--r--. 1 ec2-user ec2-user   5619 Jul 16 08:00 graphene_mol_r_6_6_h_173.py
+-rw-r--r--. 1 ec2-user ec2-user   5618 Jul 16 08:00 graphene_mol_r_6_6_h_172.py
+
+ap-northeast-1_52-192-252-223
+total 516
+-rw-r--r--. 1 ec2-user ec2-user      0 Jul 19 23:58 logfile
+-rw-r--r--. 1 root     root     139617 Jul 19 23:43 graphene_mol_r_6_6_h_184.out
+-rw-r--r--. 1 root     root     139622 Jul 19 23:27 graphene_mol_r_6_6_h_185.out
+-rw-r--r--. 1 root     root      13254 Jul 19 21:37 graphene_mol_r_6_6_h_107.out
+-rw-r--r--. 1 root     root      13275 Jul 19 01:07 graphene_mol_r_6_6_h_106.out
+-rw-r--r--. 1 ec2-user ec2-user    349 Jul 18 05:25 batch_run.py
+-rw-r--r--. 1 ec2-user ec2-user   5610 Jul 18 05:25 graphene_mol_r_6_6_h_107.py
+-rw-r--r--. 1 ec2-user ec2-user   5610 Jul 18 05:25 graphene_mol_r_6_6_h_106.py
+-rw-r--r--. 1 root     root      77389 Jul 18 03:14 graphene_mol_r_6_6_h_184.json
+-rw-r--r--. 1 root     root       3217 Jul 18 03:14 graphene_mol_r_6_6_h_184.xyz
+-rw-r--r--. 1 root     root      77415 Jul 17 22:55 graphene_mol_r_6_6_h_185.json
+-rw-r--r--. 1 root     root       3157 Jul 17 22:55 graphene_mol_r_6_6_h_185.xyz
+drwxr-xr-x. 5 root     root         74 Jul 16 07:58 Graphene_venv
+-rw-r--r--. 1 ec2-user ec2-user   5619 Jul 16 07:58 graphene_mol_r_6_6_h_185.py
+-rw-r--r--. 1 ec2-user ec2-user   5619 Jul 16 07:58 graphene_mol_r_6_6_h_184.py
+
+ap-southeast-2_52-65-129-57
+total 516
+-rw-r--r--. 1 ec2-user ec2-user      0 Jul 19 23:58 logfile
+-rw-r--r--. 1 root     root     139622 Jul 19 23:33 graphene_mol_r_6_6_h_176.out
+-rw-r--r--. 1 root     root     139615 Jul 19 23:25 graphene_mol_r_6_6_h_177.out
+-rw-r--r--. 1 root     root      13254 Jul 19 22:47 graphene_mol_r_6_6_h_99.out
+-rw-r--r--. 1 root     root      13254 Jul 19 22:33 graphene_mol_r_6_6_h_98.out
+-rw-r--r--. 1 ec2-user ec2-user    349 Jul 18 05:25 batch_run.py
+-rw-r--r--. 1 ec2-user ec2-user   5608 Jul 18 05:25 graphene_mol_r_6_6_h_99.py
+-rw-r--r--. 1 ec2-user ec2-user   5608 Jul 18 05:25 graphene_mol_r_6_6_h_98.py
+-rw-r--r--. 1 root     root      77438 Jul 18 01:22 graphene_mol_r_6_6_h_176.json
+-rw-r--r--. 1 root     root       3172 Jul 18 01:22 graphene_mol_r_6_6_h_176.xyz
+-rw-r--r--. 1 root     root      77462 Jul 17 22:55 graphene_mol_r_6_6_h_177.json
+-rw-r--r--. 1 root     root       3209 Jul 17 22:55 graphene_mol_r_6_6_h_177.xyz
+drwxr-xr-x. 5 root     root         74 Jul 16 07:59 Graphene_venv
+-rw-r--r--. 1 ec2-user ec2-user   5619 Jul 16 07:59 graphene_mol_r_6_6_h_177.py
+-rw-r--r--. 1 ec2-user ec2-user   5619 Jul 16 07:59 graphene_mol_r_6_6_h_176.py
+
+sa-east-1_54-232-55-92
+total 92
+-rw-r--r--. 1 ec2-user ec2-user     0 Jul 20 00:01 logfile
+-rw-r--r--. 1 root     root     13275 Jul 19 23:21 graphene_mol_r_6_6_h_148.out
+-rw-r--r--. 1 root     root      7337 Jul 19 19:43 graphene_mol_r_6_6_h_105.out
+-rw-r--r--. 1 root     root     13275 Jul 19 15:40 graphene_mol_r_6_6_h_149.out
+-rw-r--r--. 1 root     root     13276 Jul 19 08:19 graphene_mol_r_6_6_h_104.out
+-rw-r--r--. 1 ec2-user ec2-user   349 Jul 18 16:15 batch_run.py
+-rw-r--r--. 1 ec2-user ec2-user  5610 Jul 18 16:15 graphene_mol_r_6_6_h_105.py
+-rw-r--r--. 1 ec2-user ec2-user  5610 Jul 18 16:14 graphene_mol_r_6_6_h_104.py
+-rw-r--r--. 1 ec2-user ec2-user  5616 Jul 16 09:02 graphene_mol_r_6_6_h_149.py
+-rw-r--r--. 1 ec2-user ec2-user  5614 Jul 16 09:02 graphene_mol_r_6_6_h_148.py
+drwxr-xr-x. 5 root     root        74 Jul 16 08:10 Graphene_venv
+
+ap-south-1_13-201-226-157
+total 620
+-rw-r--r--. 1 ec2-user ec2-user      0 Jul 19 23:55 logfile
+-rw-r--r--. 1 root     root      77439 Jul 19 23:19 graphene_mol_r_6_6_h_24.json
+-rw-r--r--. 1 root     root     343991 Jul 19 23:19 graphene_mol_r_6_6_h_24.out
+-rw-r--r--. 1 root     root       3173 Jul 19 23:19 graphene_mol_r_6_6_h_24.xyz
+-rw-r--r--. 1 root     root     139620 Jul 19 22:34 graphene_mol_r_6_6_h_25.out
+-rw-r--r--. 1 root     root       7336 Jul 19 20:19 graphene_mol_r_6_6_h_218.out
+-rw-r--r--. 1 root     root      13275 Jul 19 08:38 graphene_mol_r_6_6_h_219.out
+-rw-r--r--. 1 ec2-user ec2-user    349 Jul 18 08:52 batch_run.py
+-rw-r--r--. 1 ec2-user ec2-user   5599 Jul 18 08:52 graphene_mol_r_6_6_h_25.py
+-rw-r--r--. 1 ec2-user ec2-user   5599 Jul 18 08:52 graphene_mol_r_6_6_h_24.py
+-rw-r--r--. 1 ec2-user ec2-user   5622 Jul 16 07:36 graphene_mol_r_6_6_h_219.py
+-rw-r--r--. 1 ec2-user ec2-user   5621 Jul 16 07:36 graphene_mol_r_6_6_h_218.py
+drwxr-xr-x. 5 root     root         74 Jul 16 00:16 Graphene_venv
+
+ap-southeast-1_54-169-208-168
+total 624
+-rw-r--r--. 1 ec2-user ec2-user      0 Jul 19 23:59 logfile
+-rw-r--r--. 1 root     root      99920 Jul 19 23:54 graphene_mol_r_6_6_h_175.out
+-rw-r--r--. 1 root     root      99928 Jul 19 23:45 graphene_mol_r_6_6_h_174.out
+-rw-r--r--. 1 root     root      99924 Jul 19 23:45 graphene_mol_r_6_6_h_76.out
+-rw-r--r--. 1 root     root     113154 Jul 19 21:45 graphene_mol_r_6_6_h_77.out
+-rw-r--r--. 1 ec2-user ec2-user    349 Jul 18 08:56 batch_run.py
+-rw-r--r--. 1 ec2-user ec2-user   5605 Jul 18 08:56 graphene_mol_r_6_6_h_77.py
+-rw-r--r--. 1 ec2-user ec2-user   5605 Jul 18 08:56 graphene_mol_r_6_6_h_76.py
+-rw-r--r--. 1 root     root      77416 Jul 18 01:10 graphene_mol_r_6_6_h_175.json
+-rw-r--r--. 1 root     root       3179 Jul 18 01:10 graphene_mol_r_6_6_h_175.xyz
+-rw-r--r--. 1 root     root      77414 Jul 18 00:15 graphene_mol_r_6_6_h_174.json
+-rw-r--r--. 1 root     root       3179 Jul 18 00:15 graphene_mol_r_6_6_h_174.xyz
+drwxr-xr-x. 5 root     root         74 Jul 16 08:00 Graphene_venv
+-rw-r--r--. 1 ec2-user ec2-user   5619 Jul 16 08:00 graphene_mol_r_6_6_h_175.py
+-rw-r--r--. 1 ec2-user ec2-user   5619 Jul 16 08:00 graphene_mol_r_6_6_h_174.py
+
+eu-central-1_3-122-113-113
+total 400
+-rw-r--r--. 1 ec2-user ec2-user      0 Jul 19 23:59 logfile
+-rw-r--r--. 1 root     root     139622 Jul 19 23:58 graphene_mol_r_6_6_h_81.out
+-rw-r--r--. 1 root     root     132345 Jul 19 23:22 graphene_mol_r_6_6_h_80.out
+-rw-r--r--. 1 root     root      13275 Jul 19 18:26 graphene_mol_r_6_6_h_166.out
+-rw-r--r--. 1 root     root      13276 Jul 19 12:36 graphene_mol_r_6_6_h_167.out
+-rw-r--r--. 1 ec2-user ec2-user    349 Jul 18 08:57 batch_run.py
+-rw-r--r--. 1 ec2-user ec2-user   5605 Jul 18 08:57 graphene_mol_r_6_6_h_81.py
+-rw-r--r--. 1 ec2-user ec2-user   5605 Jul 18 08:57 graphene_mol_r_6_6_h_80.py
+drwxr-xr-x. 5 root     root         74 Jul 16 08:02 Graphene_venv
+-rw-r--r--. 1 ec2-user ec2-user   5616 Jul 16 08:02 graphene_mol_r_6_6_h_167.py
+-rw-r--r--. 1 ec2-user ec2-user   5616 Jul 16 08:02 graphene_mol_r_6_6_h_166.py
+
+us-west-2_34-212-4-104
+total 1804
+-rw-r--r--. 1 ec2-user ec2-user      0 Jul 19 23:49 logfile
+-rw-r--r--. 1 root     root      77453 Jul 19 10:58 graphene_mol_r_6_6_h_134.json
+-rw-r--r--. 1 root     root     383683 Jul 19 10:58 graphene_mol_r_6_6_h_134.out
+-rw-r--r--. 1 root     root       3174 Jul 19 10:58 graphene_mol_r_6_6_h_134.xyz
+-rw-r--r--. 1 root     root      77462 Jul 19 09:38 graphene_mol_r_6_6_h_224.json
+-rw-r--r--. 1 root     root     357212 Jul 19 09:38 graphene_mol_r_6_6_h_224.out
+-rw-r--r--. 1 root     root       3159 Jul 19 09:38 graphene_mol_r_6_6_h_224.xyz
+-rw-r--r--. 1 root     root      77437 Jul 19 09:35 graphene_mol_r_6_6_h_225.json
+-rw-r--r--. 1 root     root     357216 Jul 19 09:35 graphene_mol_r_6_6_h_225.out
+-rw-r--r--. 1 root     root       3217 Jul 19 09:35 graphene_mol_r_6_6_h_225.xyz
+-rw-r--r--. 1 root     root     357286 Jul 19 09:05 graphene_mol_r_6_6_h_135.out
+-rw-r--r--. 1 root     root       3192 Jul 19 09:05 graphene_mol_r_6_6_h_135.xyz
+-rw-r--r--. 1 root     root      77442 Jul 19 09:05 graphene_mol_r_6_6_h_135.json
+-rw-r--r--. 1 ec2-user ec2-user    349 Jul 17 18:25 batch_run.py
+-rw-r--r--. 1 ec2-user ec2-user   5613 Jul 17 18:25 graphene_mol_r_6_6_h_135.py
+-rw-r--r--. 1 ec2-user ec2-user   5613 Jul 17 18:25 graphene_mol_r_6_6_h_134.py
+-rw-r--r--. 1 ec2-user ec2-user   5625 Jul 16 07:35 graphene_mol_r_6_6_h_225.py
+-rw-r--r--. 1 ec2-user ec2-user   5625 Jul 16 07:35 graphene_mol_r_6_6_h_224.py
+drwxr-xr-x. 5 root     root         74 Jul 15 23:49 Graphene_venv
+
+ap-northeast-3_13-208-191-136
+total 100
+-rw-r--r--. 1 ec2-user ec2-user     0 Jul 19 23:58 logfile
+-rw-r--r--. 1 root     root     13273 Jul 19 07:25 graphene_mol_r_6_6_h_196.out
+-rw-r--r--. 1 root     root     13275 Jul 19 05:14 graphene_mol_r_6_6_h_51.out
+-rw-r--r--. 1 root     root     13275 Jul 19 04:39 graphene_mol_r_6_6_h_50.out
+-rw-r--r--. 1 root     root     13276 Jul 19 02:01 graphene_mol_r_6_6_h_197.out
+-rw-r--r--. 1 ec2-user ec2-user   349 Jul 18 08:55 batch_run.py
+-rw-r--r--. 1 ec2-user ec2-user  5602 Jul 18 08:55 graphene_mol_r_6_6_h_51.py
+-rw-r--r--. 1 ec2-user ec2-user  5602 Jul 18 08:55 graphene_mol_r_6_6_h_50.py
+drwxr-xr-x. 5 root     root        74 Jul 16 07:48 Graphene_venv
+-rw-r--r--. 1 ec2-user ec2-user  5621 Jul 16 07:48 graphene_mol_r_6_6_h_197.py
+-rw-r--r--. 1 ec2-user ec2-user  5622 Jul 16 07:48 graphene_mol_r_6_6_h_196.py
+
+ap-northeast-1_13-115-184-112
+total 524
+-rw-r--r--. 1 ec2-user ec2-user      0 Jul 19 23:58 logfile
+-rw-r--r--. 1 root     root     145569 Jul 19 23:09 graphene_mol_r_6_6_h_182.out
+-rw-r--r--. 1 root     root     145544 Jul 19 22:07 graphene_mol_r_6_6_h_183.out
+-rw-r--r--. 1 root     root      13275 Jul 19 08:23 graphene_mol_r_6_6_h_104.out
+-rw-r--r--. 1 root     root      13275 Jul 19 01:56 graphene_mol_r_6_6_h_105.out
+-rw-r--r--. 1 ec2-user ec2-user    349 Jul 18 05:25 batch_run.py
+-rw-r--r--. 1 ec2-user ec2-user   5610 Jul 18 05:25 graphene_mol_r_6_6_h_105.py
+-rw-r--r--. 1 ec2-user ec2-user   5610 Jul 18 05:25 graphene_mol_r_6_6_h_104.py
+-rw-r--r--. 1 root     root      77377 Jul 17 22:59 graphene_mol_r_6_6_h_182.json
+-rw-r--r--. 1 root     root       3188 Jul 17 22:59 graphene_mol_r_6_6_h_182.xyz
+-rw-r--r--. 1 root     root      77411 Jul 17 20:01 graphene_mol_r_6_6_h_183.json
+-rw-r--r--. 1 root     root       3172 Jul 17 20:01 graphene_mol_r_6_6_h_183.xyz
+drwxr-xr-x. 5 root     root         74 Jul 16 07:58 Graphene_venv
+-rw-r--r--. 1 ec2-user ec2-user   5619 Jul 16 07:58 graphene_mol_r_6_6_h_183.py
+-rw-r--r--. 1 ec2-user ec2-user   5619 Jul 16 07:58 graphene_mol_r_6_6_h_182.py
+
+eu-north-1_51-20-65-114
+total 932
+-rw-r--r--. 1 ec2-user ec2-user      0 Jul 19 23:56 logfile
+-rw-r--r--. 1 root     root      33781 Jul 19 21:53 graphene_mol_r_6_6_h_207.out
+-rw-r--r--. 1 root     root      77483 Jul 19 15:59 graphene_mol_r_6_6_h_37.json
+-rw-r--r--. 1 root     root     357290 Jul 19 15:59 graphene_mol_r_6_6_h_37.out
+-rw-r--r--. 1 root     root       3204 Jul 19 15:59 graphene_mol_r_6_6_h_37.xyz
+-rw-r--r--. 1 root     root      13254 Jul 19 13:49 graphene_mol_r_6_6_h_206.out
+-rw-r--r--. 1 root     root      77444 Jul 19 12:41 graphene_mol_r_6_6_h_36.json
+-rw-r--r--. 1 root     root     330831 Jul 19 12:41 graphene_mol_r_6_6_h_36.out
+-rw-r--r--. 1 root     root       3182 Jul 19 12:41 graphene_mol_r_6_6_h_36.xyz
+-rw-r--r--. 1 ec2-user ec2-user    349 Jul 18 08:53 batch_run.py
+-rw-r--r--. 1 ec2-user ec2-user   5599 Jul 18 08:53 graphene_mol_r_6_6_h_37.py
+-rw-r--r--. 1 ec2-user ec2-user   5599 Jul 18 08:53 graphene_mol_r_6_6_h_36.py
+-rw-r--r--. 1 ec2-user ec2-user   5622 Jul 16 07:37 graphene_mol_r_6_6_h_207.py
+-rw-r--r--. 1 ec2-user ec2-user   5620 Jul 16 07:37 graphene_mol_r_6_6_h_206.py
+drwxr-xr-x. 5 root     root         74 Jul 16 00:21 Graphene_venv
+
+ap-northeast-1_18-183-164-170
+total 700
+-rw-r--r--. 1 ec2-user ec2-user      0 Jul 19 23:58 logfile
+-rw-r--r--. 1 root     root     139622 Jul 19 22:41 graphene_mol_r_6_6_h_186.out
+-rw-r--r--. 1 root     root      77363 Jul 19 20:55 graphene_mol_r_6_6_h_187.json
+-rw-r--r--. 1 root     root     330755 Jul 19 20:55 graphene_mol_r_6_6_h_187.out
+-rw-r--r--. 1 root     root       3231 Jul 19 20:55 graphene_mol_r_6_6_h_187.xyz
+-rw-r--r--. 1 root     root      13276 Jul 19 19:07 graphene_mol_r_6_6_h_109.out
+-rw-r--r--. 1 root     root      13274 Jul 19 12:58 graphene_mol_r_6_6_h_108.out
+-rw-r--r--. 1 ec2-user ec2-user    349 Jul 18 05:25 batch_run.py
+-rw-r--r--. 1 ec2-user ec2-user   5610 Jul 18 05:25 graphene_mol_r_6_6_h_109.py
+-rw-r--r--. 1 ec2-user ec2-user   5610 Jul 18 05:25 graphene_mol_r_6_6_h_108.py
+-rw-r--r--. 1 root     root      77402 Jul 17 20:57 graphene_mol_r_6_6_h_186.json
+-rw-r--r--. 1 root     root       3177 Jul 17 20:57 graphene_mol_r_6_6_h_186.xyz
+drwxr-xr-x. 5 root     root         74 Jul 16 07:58 Graphene_venv
+-rw-r--r--. 1 ec2-user ec2-user   5619 Jul 16 07:58 graphene_mol_r_6_6_h_187.py
+-rw-r--r--. 1 ec2-user ec2-user   5619 Jul 16 07:58 graphene_mol_r_6_6_h_186.py
+
+(base) maolinml@3c06303dc09d run_on_ec2s_2 % 

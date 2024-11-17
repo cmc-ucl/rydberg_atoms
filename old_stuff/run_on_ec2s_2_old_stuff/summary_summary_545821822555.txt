@@ -1,0 +1,8 @@
+which instances are doing nothing
+ap-northeast-3_13-208-169-53
+
+which tasks are being run
+
+
+
+which ones are newly done?
