@@ -1,8 +1,70 @@
 import numpy as np
 import copy
-from pymatgen.core.structure import Structure
+from pymatgen.core.structure import Structure,Molecule
 
 
+def cut_graphene_rectangle(structure_bulk,width, height,center=True):
+    
+    """
+    Cut a graphene structure to a specified size using a hexagonal mask.
+
+    This function takes a bulk graphene structure and creates a smaller graphene structure
+    by applying a hexagonal mask with the specified size. The resulting structure is a
+    smaller graphene sheet centered on the original structure.
+
+    Parameters:
+    - structure_bulk (Structure): The bulk graphene structure to be cut.
+    - size (float): The size of the hexagonal mask used for cutting.
+
+    Returns:
+    - Molecule: A smaller graphene structure after applying the hexagonal mask.
+
+    """
+    
+    structure = copy.deepcopy(structure_bulk)
+    
+    
+    expansion_matrix = 20*np.eye(3)
+    expansion_matrix[2][2] = 1
+    structure.make_supercell(expansion_matrix)
+    if center == True:
+        com = np.mean(structure.frac_coords,axis=0)
+        structure.translate_sites(np.arange(structure.num_sites),-com,to_unit_cell=False)
+
+    mask = []
+    for i in range(structure.num_sites):
+        x = structure.cart_coords[i][0]
+        y = structure.cart_coords[i][1]
+        mask.append(is_inside_rectangle(width, height,x, y))
+        
+    keep_site = np.where(np.array(mask) == True)
+    
+    species = np.array(structure.atomic_numbers)[keep_site]
+    coordinates = np.array(structure.cart_coords)[keep_site]
+    return Molecule(species,coordinates)
+
+
+def is_inside_rectangle(width, height, x, y):
+    """
+    Check if a point (x, y) is inside a rectangle of specified width and height.
+
+    This function determines whether a given point is inside or outside a rectangle
+    with specified width and height.
+
+    Parameters:
+    - width (float): The width of the rectangle.
+    - height (float): The height of the rectangle.
+    - x (float): The x-coordinate of the point to be checked.
+    - y (float): The y-coordinate of the point to be checked.
+
+    Returns:
+    - inside (bool): True if the point is inside the rectangle, False otherwise.
+    """
+    return 0 <= x <= width and 0 <= y <= height
+
+
+
+#########################
 
 def get_all_configurations(gui_object):
 
