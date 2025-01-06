@@ -11,6 +11,11 @@ slurm-*
 *.ppt
 *.pptx
 
+#old input/output
+data/pyscf
+data/crystal/graphene_old
+data/crystal/benzene
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
