@@ -10,6 +10,7 @@ slurm-*
 #Other
 *.ppt
 *.pptx
+.DS_Store
 
 #old input/output
 data/pyscf
