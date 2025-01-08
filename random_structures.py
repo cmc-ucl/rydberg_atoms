@@ -4,8 +4,13 @@
 import copy
 import numpy as np
 
+from pymatgen.symmetry.analyzer import SpacegroupAnalyzer
+from pymatgen.core.structure import Structure
+
+
 def build_symmetry_equivalent_configurations(atom_indices, N_index):
     """
+    WIP: does this work for more than one atom?
     Build symmetry-equivalent configurations for given atom indices and selected sites.
 
     Parameters:
@@ -36,6 +41,43 @@ def build_symmetry_equivalent_configurations(atom_indices, N_index):
     return unique_configurations
 
 
+def build_test_train_set(structures_train, energies_train, atom_indices, N_atom):
+    """
+    WIP: add more than one substitution option.
+    Build the test and training dataset by generating symmetry-equivalent configurations.
+
+    Parameters:
+        structures_train (list): List of training structures.
+        energies_train (list): List of energies corresponding to the training structures.
+        atom_indices (np.ndarray): Array of atom indices for symmetry generation.
+        N_atom (int): Atomic number of the target atom.
+
+    Returns:
+        tuple: 
+            - all_configurations (np.ndarray): Array of symmetry-equivalent configurations.
+            - all_energies (np.ndarray): Array of corresponding energies.
+    """
+    all_configurations = []
+    all_energies = []
+
+    for i, structure in enumerate(structures_train):
+        # Identify indices of atoms with the target atomic number
+        N_index = np.where(np.array(structure.atomic_numbers) == N_atom)[0]
+
+        # Generate symmetry-equivalent configurations
+        symmetry_configs = build_symmetry_equivalent_configurations(atom_indices, N_index).tolist()
+        
+        # Extend configurations and energies
+        all_configurations.extend(symmetry_configs)
+        all_energies.extend([energies_train[i]] * len(symmetry_configs))
+
+    # Convert to NumPy arrays
+    all_configurations = np.array(all_configurations)
+    all_energies = np.array(all_energies)
+
+    return all_configurations, all_energies
+
+
 def generate_random_structures(
     initial_structure,
     atom_indices,
@@ -43,11 +85,12 @@ def generate_random_structures(
     new_species,
     N_config,
     DFT_config,
-    active_sites=False,
+    active_sites=None,
     return_multiplicity=False
 ):
     """
-    Generate symmetry-independent structures based on random configurations.
+    Generate symmetry-independent structures based on random configurations. 
+    WIP: This works for one substitution only, extend it to more (not just binary)
 
     Parameters:
     - initial_structure: The starting structure object.
@@ -74,7 +117,7 @@ def generate_random_structures(
     N_attempts = 0
 
     # Determine active sites
-    if not active_sites:
+    if active_sites is None:
         num_sites = initial_structure.num_sites
         active_sites = np.arange(num_sites)
     else:
@@ -115,3 +158,62 @@ def generate_random_structures(
     
     return final_structures
 
+
+def get_all_configurations(structure_pmg, prec=6):
+    """
+    Generate all symmetry-equivalent atomic configurations for a given structure.
+
+    Parameters:
+        structure_pmg (pymatgen.core.structure.Structure): Input structure.
+        prec (int): Precision for rounding fractional coordinates.
+
+    Returns:
+        np.ndarray: Matrix where each row corresponds to the atom indices for
+                    a symmetry-equivalent configuration.
+    """
+    # Get symmetry operations
+    symmops = SpacegroupAnalyzer(structure_pmg).get_symmetry_operations()
+    n_symmops = len(symmops)
+
+    # Extract structure data
+    coordinates = np.round(np.array(structure_pmg.frac_coords), prec)
+    atom_numbers = np.array(structure_pmg.atomic_numbers)
+    lattice = structure_pmg.lattice.matrix
+
+    # Prepare original structure for appending atoms
+    original_structure_pmg = copy.deepcopy(structure_pmg)
+
+    # Initialize atom indices matrix
+    atom_indices = np.ones((n_symmops, structure_pmg.num_sites), dtype=int) * -1
+
+    # Loop over symmetry operations
+    for i, symmop in enumerate(symmops):
+        # Apply symmetry operation to fractional coordinates
+        transformed_coords = [
+            np.round(symmop.operate(coord), prec) for coord in coordinates
+        ]
+        
+        # Create a temporary structure with transformed coordinates
+        structure_tmp = Structure(
+            lattice, atom_numbers, transformed_coords, coords_are_cartesian=False, to_unit_cell=False
+        )
+
+        # Append original atoms to avoid missing sites
+        for atomic_number, coord in zip(
+            original_structure_pmg.atomic_numbers, original_structure_pmg.frac_coords
+        ):
+            structure_tmp.append(
+                atomic_number, coord, coords_are_cartesian=False, validate_proximity=False
+            )
+
+        # Map transformed sites to original indices
+        for m in range(len(atom_numbers)):
+            index = len(atom_numbers) + m
+            for n in range(len(atom_numbers)):
+                if structure_tmp.sites[n].is_periodic_image(
+                    structure_tmp.sites[index], tolerance=0.001
+                ):
+                    atom_indices[i, m] = n
+                    break
+
+    return atom_indices
