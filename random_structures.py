@@ -217,3 +217,5 @@ def get_all_configurations(structure_pmg, prec=6):
                     break
 
     return atom_indices
+
+
