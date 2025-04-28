@@ -1,5 +1,7 @@
 import numpy as np
 import copy
+import os
+import json
 from pymatgen.core.structure import Structure,Molecule
 
 
@@ -62,7 +64,7 @@ def is_inside_rectangle(width, height, x, y):
     """
     return 0 <= x <= width and 0 <= y <= height
 
-
+#########################
 
 #########################
 
@@ -320,6 +322,7 @@ def get_partition_function(energy, multiplicity, T=298.15, return_pi=True, N_N=0
   
     
 def build_adjacency_matrix(structure, max_neigh = 1, diagonal_terms = False, triu = False):
+
     # structure = pymatgen Structure object
     
     num_sites = structure.num_sites
@@ -341,3 +344,97 @@ def build_adjacency_matrix(structure, max_neigh = 1, diagonal_terms = False, tri
         np.fill_diagonal(distance_matrix,[1]*num_sites)
     
     return distance_matrix
+
+
+def extract_pre_post_sequences(json_file):
+    """
+    Extracts pre_sequence and post_sequence lists separately from a given JSON structure.
+
+    Parameters:
+    json_data (dict): JSON dictionary containing "shot_outputs" with "pre_sequence" and "post_sequence".
+
+    Returns:
+    tuple: Two lists - one for all pre_sequences and one for all post_sequences.
+    """
+
+    with open(json_file, 'r') as f:
+        json_data = json.load(f)
+
+    pre_sequences = []
+    post_sequences = []
+
+    for shot in json_data.get("shot_outputs", []):
+        pre_sequences.append(shot.get("pre_sequence", []))
+        post_sequences.append(shot.get("post_sequence", []))
+    
+    return pre_sequences, post_sequences
+
+# Extract pre and post sequences separately
+
+def read_all_sequences_from_folder(folder_path):
+    """
+    Reads all .json files in the given folder and extracts combined pre- and post-sequences.
+
+    Parameters:
+        folder_path (str): Path to folder containing JSON files.
+
+    Returns:
+        tuple: Two flat lists - concatenated pre_sequences and post_sequences from all files.
+    """
+    all_pre = []
+    all_post = []
+
+    for filename in os.listdir(folder_path):
+        if filename.endswith('.json'):
+            full_path = os.path.join(folder_path, filename)
+            pre, post = extract_pre_post_sequences(full_path)
+            # Flatten and concatenate
+            for p in pre:
+                all_pre.append(p)
+            for q in post:
+                all_post.append(q)
+
+    return all_pre, all_post
+
+
+def get_hamming(preseqs,postseqs): 
+    
+    preseqs = np.array(preseqs)
+    postseqs = np.array(postseqs)
+    
+    num_atoms = preseqs.shape[1]
+    
+    keep_config = np.where(np.sum(preseqs,axis=1) == num_atoms)[0]
+
+    hamming = num_atoms-np.sum(postseqs[keep_config],axis=1)
+    len_hamming = len(hamming)
+    hamming_average = np.average(hamming)
+    hamming_std = np.std(hamming)
+    hamming_max = np.max(hamming)
+    hamming_min = np.min(hamming)
+    
+    hamming_unique, unique_index = np.unique(hamming,return_counts=True)
+#     print(np.average(np.sum(postseqs[keep_config],axis=1)))
+    return len_hamming, hamming_average, hamming_std,hamming_max,hamming_min,hamming_unique, unique_index
+
+
+def stack_chunks_vertically(arr, chunk_size=28):
+    """
+    Split a (N, M) array into M/chunk_size horizontal chunks,
+    and stack them vertically to shape (N * num_chunks, chunk_size).
+    
+    Parameters:
+        arr (ndarray): Input array of shape (N, M)
+        chunk_size (int): Width of each chunk (default is 28)
+    
+    Returns:
+        stacked (ndarray): Output array of shape (N * num_chunks, chunk_size)
+    """
+    if arr.shape[1] % chunk_size != 0:
+        raise ValueError("Array width must be divisible by chunk_size.")
+
+    num_chunks = arr.shape[1] // chunk_size
+    chunks = [arr[:, i*chunk_size:(i+1)*chunk_size] for i in range(num_chunks)]
+    stacked = np.vstack(chunks)
+    return stacked
+
