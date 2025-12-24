@@ -4,8 +4,8 @@
 import copy
 import numpy as np
 
-from pymatgen.symmetry.analyzer import SpacegroupAnalyzer
-from pymatgen.core.structure import Structure
+from pymatgen.symmetry.analyzer import SpacegroupAnalyzer, PointGroupAnalyzer
+from pymatgen.core.structure import Structure, Molecule
 
 
 def build_symmetry_equivalent_configurations(atom_indices, N_index):
@@ -218,4 +218,41 @@ def get_all_configurations(structure_pmg, prec=6):
 
     return atom_indices
 
+
+def get_all_configurations_molecule(mol: Molecule, prec=6, tol=1e-3):
+    """
+    Generate all symmetry-equivalent atomic configurations for a given molecule.
+
+    Parameters:
+        mol (pymatgen.core.structure.Molecule): Input molecule.
+        prec (int): Precision for rounding coordinates.
+        tol (float): Distance tolerance for identifying equivalent atoms.
+
+    Returns:
+        np.ndarray: Matrix where each row corresponds to the atom indices for
+                    a symmetry-equivalent configuration.
+    """
+    mol = mol.get_centered_molecule()
+    pga = PointGroupAnalyzer(mol)
+    symmops = pga.get_symmetry_operations()
+
+    coords = np.round(np.array(mol.cart_coords), prec)
+    atomic_numbers = np.array(mol.atomic_numbers)
+    num_atoms = len(coords)
+
+    atom_indices = np.ones((len(symmops), num_atoms), dtype=int) * -1
+
+    for i, symmop in enumerate(symmops):
+        transformed_coords = np.round(np.array([symmop.operate(c) for c in coords]), prec)
+        used = set()
+        for j, trans_coord in enumerate(transformed_coords):
+            for k, orig_coord in enumerate(coords):
+                if k in used:
+                    continue
+                if atomic_numbers[j] == atomic_numbers[k] and np.linalg.norm(trans_coord - orig_coord) < tol:
+                    atom_indices[i, j] = k
+                    used.add(k)
+                    break
+
+    return atom_indices
 

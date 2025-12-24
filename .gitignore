@@ -1,12 +1,14 @@
 # Temporary for article submission
-data/
-qpu_data/
+data/*
+qpu_data/*
 rydberg_atoms_local/
 Atom_Arrangment_Mao_Bruno.ipynb
 Atoms_arrangements.ipynb
 compare_E_ryd_QUBO.ipynb
 materials_science.ipynb
 paper_part_two.ipynb
+compare_qpu_classical.ipynb
+
 #CRYSTAL specific
 *.f*
 *.hessopt
