@@ -1,3 +1,12 @@
+# Temporary for article submission
+data/
+qpu_data/
+rydberg_atoms_local/
+Atom_Arrangment_Mao_Bruno.ipynb
+Atoms_arrangements.ipynb
+compare_E_ryd_QUBO.ipynb
+materials_science.ipynb
+paper_part_two.ipynb
 #CRYSTAL specific
 *.f*
 *.hessopt
@@ -13,9 +22,8 @@ slurm-*
 .DS_Store
 
 #old input/output
-data/pyscf
-data/crystal/graphene_old
-data/crystal/benzene
+data/TO_REMOVE
+
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
