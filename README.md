@@ -1,6 +1,6 @@
 # Thermodynamic sampling of materials using neutral-atom quantum computers
 
-This repository contains the code used to generate the results reported in the articles titled: "Thermodynamic sampling of materials using neutral-atom quantum computers" currently under consideration for submission in Nature Communications.
+This repository contains the code used to generate the results reported in the articles titled: "Thermodynamic sampling of materials using neutral-atom quantum computers" currently under consideration for submission in npj Quantum Information.
 
 The code for the data analysis reported in the paper can be found in the notebooks:
 - paper_part_one.ipynb
